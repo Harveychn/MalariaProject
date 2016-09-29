@@ -17,9 +17,9 @@ public class PatientAddressServiceImpl implements PatientAddressService {
     @Resource
     private PatientAddressMapper patientAddressMapper;
     @Override
-    public List<PatientAddress> getByPojoExample(){
-        PatientAddressExample patientAddressExample = new PatientAddressExample();
-        patientAddressExample.createCriteria().andPaaddressLike("云南省保山市腾冲县%").andCardidBetween(4952200,4952687);
+    public List<PatientAddress> getByPojoExample(PatientAddressExample patientAddressExample){
+//        PatientAddressExample patientAddressExample = new PatientAddressExample();
+//        patientAddressExample.createCriteria().andPaaddressLike("云南省保山市腾冲县%").andCardidBetween(4952200,4952687);
         return patientAddressMapper.selectByExample(patientAddressExample);
     }
 }

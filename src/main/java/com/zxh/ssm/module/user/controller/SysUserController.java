@@ -31,7 +31,7 @@ public class SysUserController {
 	
 	@RequestMapping("/showUserToJSONById/{userId}")
 	@ResponseBody
-	public SysUser showUser(@PathVariable("userId") Long userId){
+	public  SysUser showUser(@PathVariable("userId") Long userId){
 		SysUser user = sysUserService.getById(userId);
 		return user;
 	}

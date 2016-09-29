@@ -19,11 +19,10 @@
 
 <br>
 
-<a href="/sysUserController/showUserToJspById/1" target="_blank">查询用户信息并跳转到一个JSP页面</a>
-
+<a href="/PatientAddressController/testController.action?id=传递参数&status=success" target="_blank">patientAddrTest</a>
 <br>
 
-<a href="/sysUserController/showUserToJSONById/1" target="_blank">查询用户信息并直接输出JSON数据</a>
+<a href="/PatientAddressController/testControllerJson.action" target="_blank">patientAddr==JSONT-est</a>
 
 </body>
 </html>
