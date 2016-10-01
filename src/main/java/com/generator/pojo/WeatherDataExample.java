@@ -1,8 +1,6 @@
 package com.generator.pojo;
 
 import java.util.ArrayList;
-import java.util.Date;
-import java.util.Iterator;
 import java.util.List;
 
 public class WeatherDataExample {
@@ -196,32 +194,6 @@ public class WeatherDataExample {
             criteria.add(new Criterion(condition, value1, value2));
         }
 
-        protected void addCriterionForJDBCDate(String condition, Date value, String property) {
-            if (value == null) {
-                throw new RuntimeException("Value for " + property + " cannot be null");
-            }
-            addCriterion(condition, new java.sql.Date(value.getTime()), property);
-        }
-
-        protected void addCriterionForJDBCDate(String condition, List<Date> values, String property) {
-            if (values == null || values.size() == 0) {
-                throw new RuntimeException("Value list for " + property + " cannot be null or empty");
-            }
-            List<java.sql.Date> dateList = new ArrayList<java.sql.Date>();
-            Iterator<Date> iter = values.iterator();
-            while (iter.hasNext()) {
-                dateList.add(new java.sql.Date(iter.next().getTime()));
-            }
-            addCriterion(condition, dateList, property);
-        }
-
-        protected void addCriterionForJDBCDate(String condition, Date value1, Date value2, String property) {
-            if (value1 == null || value2 == null) {
-                throw new RuntimeException("Between values for " + property + " cannot be null");
-            }
-            addCriterion(condition, new java.sql.Date(value1.getTime()), new java.sql.Date(value2.getTime()), property);
-        }
-
         public Criteria andDistricystationnumIsNull() {
             addCriterion("districyStationNum is null");
             return (Criteria) this;
@@ -292,53 +264,53 @@ public class WeatherDataExample {
             return (Criteria) this;
         }
 
-        public Criteria andWeatheryearEqualTo(Date value) {
-            addCriterionForJDBCDate("weatherYear =", value, "weatheryear");
+        public Criteria andWeatheryearEqualTo(Integer value) {
+            addCriterion("weatherYear =", value, "weatheryear");
             return (Criteria) this;
         }
 
-        public Criteria andWeatheryearNotEqualTo(Date value) {
-            addCriterionForJDBCDate("weatherYear <>", value, "weatheryear");
+        public Criteria andWeatheryearNotEqualTo(Integer value) {
+            addCriterion("weatherYear <>", value, "weatheryear");
             return (Criteria) this;
         }
 
-        public Criteria andWeatheryearGreaterThan(Date value) {
-            addCriterionForJDBCDate("weatherYear >", value, "weatheryear");
+        public Criteria andWeatheryearGreaterThan(Integer value) {
+            addCriterion("weatherYear >", value, "weatheryear");
             return (Criteria) this;
         }
 
-        public Criteria andWeatheryearGreaterThanOrEqualTo(Date value) {
-            addCriterionForJDBCDate("weatherYear >=", value, "weatheryear");
+        public Criteria andWeatheryearGreaterThanOrEqualTo(Integer value) {
+            addCriterion("weatherYear >=", value, "weatheryear");
             return (Criteria) this;
         }
 
-        public Criteria andWeatheryearLessThan(Date value) {
-            addCriterionForJDBCDate("weatherYear <", value, "weatheryear");
+        public Criteria andWeatheryearLessThan(Integer value) {
+            addCriterion("weatherYear <", value, "weatheryear");
             return (Criteria) this;
         }
 
-        public Criteria andWeatheryearLessThanOrEqualTo(Date value) {
-            addCriterionForJDBCDate("weatherYear <=", value, "weatheryear");
+        public Criteria andWeatheryearLessThanOrEqualTo(Integer value) {
+            addCriterion("weatherYear <=", value, "weatheryear");
             return (Criteria) this;
         }
 
-        public Criteria andWeatheryearIn(List<Date> values) {
-            addCriterionForJDBCDate("weatherYear in", values, "weatheryear");
+        public Criteria andWeatheryearIn(List<Integer> values) {
+            addCriterion("weatherYear in", values, "weatheryear");
             return (Criteria) this;
         }
 
-        public Criteria andWeatheryearNotIn(List<Date> values) {
-            addCriterionForJDBCDate("weatherYear not in", values, "weatheryear");
+        public Criteria andWeatheryearNotIn(List<Integer> values) {
+            addCriterion("weatherYear not in", values, "weatheryear");
             return (Criteria) this;
         }
 
-        public Criteria andWeatheryearBetween(Date value1, Date value2) {
-            addCriterionForJDBCDate("weatherYear between", value1, value2, "weatheryear");
+        public Criteria andWeatheryearBetween(Integer value1, Integer value2) {
+            addCriterion("weatherYear between", value1, value2, "weatheryear");
             return (Criteria) this;
         }
 
-        public Criteria andWeatheryearNotBetween(Date value1, Date value2) {
-            addCriterionForJDBCDate("weatherYear not between", value1, value2, "weatheryear");
+        public Criteria andWeatheryearNotBetween(Integer value1, Integer value2) {
+            addCriterion("weatherYear not between", value1, value2, "weatheryear");
             return (Criteria) this;
         }
 

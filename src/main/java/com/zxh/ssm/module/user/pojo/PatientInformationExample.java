@@ -232,53 +232,53 @@ public class PatientInformationExample {
             return (Criteria) this;
         }
 
-        public Criteria andYearEqualTo(Date value) {
-            addCriterionForJDBCDate("year =", value, "year");
+        public Criteria andYearEqualTo(Integer value) {
+            addCriterion("year =", value, "year");
             return (Criteria) this;
         }
 
-        public Criteria andYearNotEqualTo(Date value) {
-            addCriterionForJDBCDate("year <>", value, "year");
+        public Criteria andYearNotEqualTo(Integer value) {
+            addCriterion("year <>", value, "year");
             return (Criteria) this;
         }
 
-        public Criteria andYearGreaterThan(Date value) {
-            addCriterionForJDBCDate("year >", value, "year");
+        public Criteria andYearGreaterThan(Integer value) {
+            addCriterion("year >", value, "year");
             return (Criteria) this;
         }
 
-        public Criteria andYearGreaterThanOrEqualTo(Date value) {
-            addCriterionForJDBCDate("year >=", value, "year");
+        public Criteria andYearGreaterThanOrEqualTo(Integer value) {
+            addCriterion("year >=", value, "year");
             return (Criteria) this;
         }
 
-        public Criteria andYearLessThan(Date value) {
-            addCriterionForJDBCDate("year <", value, "year");
+        public Criteria andYearLessThan(Integer value) {
+            addCriterion("year <", value, "year");
             return (Criteria) this;
         }
 
-        public Criteria andYearLessThanOrEqualTo(Date value) {
-            addCriterionForJDBCDate("year <=", value, "year");
+        public Criteria andYearLessThanOrEqualTo(Integer value) {
+            addCriterion("year <=", value, "year");
             return (Criteria) this;
         }
 
-        public Criteria andYearIn(List<Date> values) {
-            addCriterionForJDBCDate("year in", values, "year");
+        public Criteria andYearIn(List<Integer> values) {
+            addCriterion("year in", values, "year");
             return (Criteria) this;
         }
 
-        public Criteria andYearNotIn(List<Date> values) {
-            addCriterionForJDBCDate("year not in", values, "year");
+        public Criteria andYearNotIn(List<Integer> values) {
+            addCriterion("year not in", values, "year");
             return (Criteria) this;
         }
 
-        public Criteria andYearBetween(Date value1, Date value2) {
-            addCriterionForJDBCDate("year between", value1, value2, "year");
+        public Criteria andYearBetween(Integer value1, Integer value2) {
+            addCriterion("year between", value1, value2, "year");
             return (Criteria) this;
         }
 
-        public Criteria andYearNotBetween(Date value1, Date value2) {
-            addCriterionForJDBCDate("year not between", value1, value2, "year");
+        public Criteria andYearNotBetween(Integer value1, Integer value2) {
+            addCriterion("year not between", value1, value2, "year");
             return (Criteria) this;
         }
 

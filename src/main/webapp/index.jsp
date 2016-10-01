@@ -1,3 +1,4 @@
+<%@ page import="com.zxh.ssm.module.user.pojo.DynamicOutbreakVo" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="utf-8" %>
 <%@ include file="/WEB-INF/view/common/tagPage.jsp" %>
 <!DOCTYPE html>
@@ -12,17 +13,17 @@
 </head>
 <body>
 
-
-<h2>
-    <a href="http://code.YouMeek.com" target="_blank">Hello YouMeek</a>
-</h2>
-
 <br>
 
-<a href="/PatientAddressController/testController.action?id=传递参数&status=success" target="_blank">patientAddrTest</a>
+<a href="/DynamicOutbreak/subModule1.action?dynamicOutbreakVo" target="_blank">
+    动态爆发测试Module 1
+</a>
+
 <br>
-
-<a href="/PatientAddressController/testControllerJson.action" target="_blank">patientAddr==JSONT-est</a>
-
+<form action="/DynamicOutbreak/subModule1.action">
+    <span>year :<input type="text" name="year"/></span>
+    <span>month:<input type="text" name="month"></span>
+    <input type="submit"/>
+</form>
 </body>
 </html>

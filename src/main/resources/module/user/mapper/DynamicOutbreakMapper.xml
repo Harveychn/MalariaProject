@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zxh.ssm.module.user.mapper.DynamicOutbreakMapper">
+
+    <resultMap id="addressResultMap" type="com.zxh.ssm.module.user.pojo.DynamicOutbreakVo">
+        <id property="address" column="address"/>
+        <result property="year" column="illYear"/>
+        <result property="month" column="illMonth"/>
+    </resultMap>
+
+    <!--<select id="selectAddressByYearMonth" parameterType="com.zxh.ssm.module.user.pojo.DynamicOutbreakVo"-->
+            <!--resultMap="addressResultMap">-->
+        <!--SELECT pi.address address,YEAR(pc.illDate) illYear,MONTH(pc.illDate) illMonth FROM patient_cases_information pc,patient_information pi-->
+	<!--WHERE pc.cardID=pi.cardID AND pc.`year`=pi.`year`-->
+	<!--AND YEAR(pc.illDate)=#{year} AND MONTH(pc.illDate)=#{month};-->
+    <!--</select>-->
+
+    <select id="selectAddressByYearMonth" parameterType="com.zxh.ssm.module.user.pojo.DynamicOutbreakVo"
+            resultType="string">
+        SELECT pi.address address FROM patient_cases_information pc,patient_information pi
+        WHERE pc.cardID=pi.cardID AND pc.`year`=pi.`year`
+        AND YEAR(pc.illDate)=#{year} AND MONTH(pc.illDate)=#{month};
+    </select>
+
+</mapper>
