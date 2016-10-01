@@ -22,7 +22,7 @@
         </commentGenerator>
 
         <!--添加你的 JDBC 连接信息-->
-        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/malaria" userId="root" password="zxh980278090"/>
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/malariaproj" userId="root" password="zxh980278090"/>
 
         <javaTypeResolver>
             <property name="forceBigDecimals" value="false"/>

@@ -1,8 +1,8 @@
-package com.generator.mapper;
+package com.zxh.ssm.module.user.mapper;
 
-import com.generator.pojo.PatientInformation;
-import com.generator.pojo.PatientInformationExample;
-import com.generator.pojo.PatientInformationKey;
+import com.zxh.ssm.module.user.pojo.PatientInformation;
+import com.zxh.ssm.module.user.pojo.PatientInformationExample;
+import com.zxh.ssm.module.user.pojo.PatientInformationKey;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
 

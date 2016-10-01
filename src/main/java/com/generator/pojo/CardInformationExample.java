@@ -1,6 +1,8 @@
 package com.generator.pojo;
 
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.Iterator;
 import java.util.List;
 
 public class CardInformationExample {
@@ -194,6 +196,92 @@ public class CardInformationExample {
             criteria.add(new Criterion(condition, value1, value2));
         }
 
+        protected void addCriterionForJDBCDate(String condition, Date value, String property) {
+            if (value == null) {
+                throw new RuntimeException("Value for " + property + " cannot be null");
+            }
+            addCriterion(condition, new java.sql.Date(value.getTime()), property);
+        }
+
+        protected void addCriterionForJDBCDate(String condition, List<Date> values, String property) {
+            if (values == null || values.size() == 0) {
+                throw new RuntimeException("Value list for " + property + " cannot be null or empty");
+            }
+            List<java.sql.Date> dateList = new ArrayList<java.sql.Date>();
+            Iterator<Date> iter = values.iterator();
+            while (iter.hasNext()) {
+                dateList.add(new java.sql.Date(iter.next().getTime()));
+            }
+            addCriterion(condition, dateList, property);
+        }
+
+        protected void addCriterionForJDBCDate(String condition, Date value1, Date value2, String property) {
+            if (value1 == null || value2 == null) {
+                throw new RuntimeException("Between values for " + property + " cannot be null");
+            }
+            addCriterion(condition, new java.sql.Date(value1.getTime()), new java.sql.Date(value2.getTime()), property);
+        }
+
+        public Criteria andYearIsNull() {
+            addCriterion("year is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andYearIsNotNull() {
+            addCriterion("year is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andYearEqualTo(Date value) {
+            addCriterionForJDBCDate("year =", value, "year");
+            return (Criteria) this;
+        }
+
+        public Criteria andYearNotEqualTo(Date value) {
+            addCriterionForJDBCDate("year <>", value, "year");
+            return (Criteria) this;
+        }
+
+        public Criteria andYearGreaterThan(Date value) {
+            addCriterionForJDBCDate("year >", value, "year");
+            return (Criteria) this;
+        }
+
+        public Criteria andYearGreaterThanOrEqualTo(Date value) {
+            addCriterionForJDBCDate("year >=", value, "year");
+            return (Criteria) this;
+        }
+
+        public Criteria andYearLessThan(Date value) {
+            addCriterionForJDBCDate("year <", value, "year");
+            return (Criteria) this;
+        }
+
+        public Criteria andYearLessThanOrEqualTo(Date value) {
+            addCriterionForJDBCDate("year <=", value, "year");
+            return (Criteria) this;
+        }
+
+        public Criteria andYearIn(List<Date> values) {
+            addCriterionForJDBCDate("year in", values, "year");
+            return (Criteria) this;
+        }
+
+        public Criteria andYearNotIn(List<Date> values) {
+            addCriterionForJDBCDate("year not in", values, "year");
+            return (Criteria) this;
+        }
+
+        public Criteria andYearBetween(Date value1, Date value2) {
+            addCriterionForJDBCDate("year between", value1, value2, "year");
+            return (Criteria) this;
+        }
+
+        public Criteria andYearNotBetween(Date value1, Date value2) {
+            addCriterionForJDBCDate("year not between", value1, value2, "year");
+            return (Criteria) this;
+        }
+
         public Criteria andCardidIsNull() {
             addCriterion("cardID is null");
             return (Criteria) this;
@@ -254,143 +342,143 @@ public class CardInformationExample {
             return (Criteria) this;
         }
 
-        public Criteria andCardnumberIsNull() {
-            addCriterion("cardNumber is null");
+        public Criteria andCardnumIsNull() {
+            addCriterion("cardNum is null");
             return (Criteria) this;
         }
 
-        public Criteria andCardnumberIsNotNull() {
-            addCriterion("cardNumber is not null");
+        public Criteria andCardnumIsNotNull() {
+            addCriterion("cardNum is not null");
             return (Criteria) this;
         }
 
-        public Criteria andCardnumberEqualTo(String value) {
-            addCriterion("cardNumber =", value, "cardnumber");
+        public Criteria andCardnumEqualTo(String value) {
+            addCriterion("cardNum =", value, "cardnum");
             return (Criteria) this;
         }
 
-        public Criteria andCardnumberNotEqualTo(String value) {
-            addCriterion("cardNumber <>", value, "cardnumber");
+        public Criteria andCardnumNotEqualTo(String value) {
+            addCriterion("cardNum <>", value, "cardnum");
             return (Criteria) this;
         }
 
-        public Criteria andCardnumberGreaterThan(String value) {
-            addCriterion("cardNumber >", value, "cardnumber");
+        public Criteria andCardnumGreaterThan(String value) {
+            addCriterion("cardNum >", value, "cardnum");
             return (Criteria) this;
         }
 
-        public Criteria andCardnumberGreaterThanOrEqualTo(String value) {
-            addCriterion("cardNumber >=", value, "cardnumber");
+        public Criteria andCardnumGreaterThanOrEqualTo(String value) {
+            addCriterion("cardNum >=", value, "cardnum");
             return (Criteria) this;
         }
 
-        public Criteria andCardnumberLessThan(String value) {
-            addCriterion("cardNumber <", value, "cardnumber");
+        public Criteria andCardnumLessThan(String value) {
+            addCriterion("cardNum <", value, "cardnum");
             return (Criteria) this;
         }
 
-        public Criteria andCardnumberLessThanOrEqualTo(String value) {
-            addCriterion("cardNumber <=", value, "cardnumber");
+        public Criteria andCardnumLessThanOrEqualTo(String value) {
+            addCriterion("cardNum <=", value, "cardnum");
             return (Criteria) this;
         }
 
-        public Criteria andCardnumberLike(String value) {
-            addCriterion("cardNumber like", value, "cardnumber");
+        public Criteria andCardnumLike(String value) {
+            addCriterion("cardNum like", value, "cardnum");
             return (Criteria) this;
         }
 
-        public Criteria andCardnumberNotLike(String value) {
-            addCriterion("cardNumber not like", value, "cardnumber");
+        public Criteria andCardnumNotLike(String value) {
+            addCriterion("cardNum not like", value, "cardnum");
             return (Criteria) this;
         }
 
-        public Criteria andCardnumberIn(List<String> values) {
-            addCriterion("cardNumber in", values, "cardnumber");
+        public Criteria andCardnumIn(List<String> values) {
+            addCriterion("cardNum in", values, "cardnum");
             return (Criteria) this;
         }
 
-        public Criteria andCardnumberNotIn(List<String> values) {
-            addCriterion("cardNumber not in", values, "cardnumber");
+        public Criteria andCardnumNotIn(List<String> values) {
+            addCriterion("cardNum not in", values, "cardnum");
             return (Criteria) this;
         }
 
-        public Criteria andCardnumberBetween(String value1, String value2) {
-            addCriterion("cardNumber between", value1, value2, "cardnumber");
+        public Criteria andCardnumBetween(String value1, String value2) {
+            addCriterion("cardNum between", value1, value2, "cardnum");
             return (Criteria) this;
         }
 
-        public Criteria andCardnumberNotBetween(String value1, String value2) {
-            addCriterion("cardNumber not between", value1, value2, "cardnumber");
+        public Criteria andCardnumNotBetween(String value1, String value2) {
+            addCriterion("cardNum not between", value1, value2, "cardnum");
             return (Criteria) this;
         }
 
-        public Criteria andCardmodeIsNull() {
-            addCriterion("cardMode is null");
+        public Criteria andCardstatusIsNull() {
+            addCriterion("cardStatus is null");
             return (Criteria) this;
         }
 
-        public Criteria andCardmodeIsNotNull() {
-            addCriterion("cardMode is not null");
+        public Criteria andCardstatusIsNotNull() {
+            addCriterion("cardStatus is not null");
             return (Criteria) this;
         }
 
-        public Criteria andCardmodeEqualTo(String value) {
-            addCriterion("cardMode =", value, "cardmode");
+        public Criteria andCardstatusEqualTo(String value) {
+            addCriterion("cardStatus =", value, "cardstatus");
             return (Criteria) this;
         }
 
-        public Criteria andCardmodeNotEqualTo(String value) {
-            addCriterion("cardMode <>", value, "cardmode");
+        public Criteria andCardstatusNotEqualTo(String value) {
+            addCriterion("cardStatus <>", value, "cardstatus");
             return (Criteria) this;
         }
 
-        public Criteria andCardmodeGreaterThan(String value) {
-            addCriterion("cardMode >", value, "cardmode");
+        public Criteria andCardstatusGreaterThan(String value) {
+            addCriterion("cardStatus >", value, "cardstatus");
             return (Criteria) this;
         }
 
-        public Criteria andCardmodeGreaterThanOrEqualTo(String value) {
-            addCriterion("cardMode >=", value, "cardmode");
+        public Criteria andCardstatusGreaterThanOrEqualTo(String value) {
+            addCriterion("cardStatus >=", value, "cardstatus");
             return (Criteria) this;
         }
 
-        public Criteria andCardmodeLessThan(String value) {
-            addCriterion("cardMode <", value, "cardmode");
+        public Criteria andCardstatusLessThan(String value) {
+            addCriterion("cardStatus <", value, "cardstatus");
             return (Criteria) this;
         }
 
-        public Criteria andCardmodeLessThanOrEqualTo(String value) {
-            addCriterion("cardMode <=", value, "cardmode");
+        public Criteria andCardstatusLessThanOrEqualTo(String value) {
+            addCriterion("cardStatus <=", value, "cardstatus");
             return (Criteria) this;
         }
 
-        public Criteria andCardmodeLike(String value) {
-            addCriterion("cardMode like", value, "cardmode");
+        public Criteria andCardstatusLike(String value) {
+            addCriterion("cardStatus like", value, "cardstatus");
             return (Criteria) this;
         }
 
-        public Criteria andCardmodeNotLike(String value) {
-            addCriterion("cardMode not like", value, "cardmode");
+        public Criteria andCardstatusNotLike(String value) {
+            addCriterion("cardStatus not like", value, "cardstatus");
             return (Criteria) this;
         }
 
-        public Criteria andCardmodeIn(List<String> values) {
-            addCriterion("cardMode in", values, "cardmode");
+        public Criteria andCardstatusIn(List<String> values) {
+            addCriterion("cardStatus in", values, "cardstatus");
             return (Criteria) this;
         }
 
-        public Criteria andCardmodeNotIn(List<String> values) {
-            addCriterion("cardMode not in", values, "cardmode");
+        public Criteria andCardstatusNotIn(List<String> values) {
+            addCriterion("cardStatus not in", values, "cardstatus");
             return (Criteria) this;
         }
 
-        public Criteria andCardmodeBetween(String value1, String value2) {
-            addCriterion("cardMode between", value1, value2, "cardmode");
+        public Criteria andCardstatusBetween(String value1, String value2) {
+            addCriterion("cardStatus between", value1, value2, "cardstatus");
             return (Criteria) this;
         }
 
-        public Criteria andCardmodeNotBetween(String value1, String value2) {
-            addCriterion("cardMode not between", value1, value2, "cardmode");
+        public Criteria andCardstatusNotBetween(String value1, String value2) {
+            addCriterion("cardStatus not between", value1, value2, "cardstatus");
             return (Criteria) this;
         }
     }

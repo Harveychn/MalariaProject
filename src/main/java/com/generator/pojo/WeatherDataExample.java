@@ -1,6 +1,8 @@
 package com.generator.pojo;
 
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.Iterator;
 import java.util.List;
 
 public class WeatherDataExample {
@@ -194,63 +196,89 @@ public class WeatherDataExample {
             criteria.add(new Criterion(condition, value1, value2));
         }
 
-        public Criteria andNumdistricystationIsNull() {
-            addCriterion("numDistricyStation is null");
+        protected void addCriterionForJDBCDate(String condition, Date value, String property) {
+            if (value == null) {
+                throw new RuntimeException("Value for " + property + " cannot be null");
+            }
+            addCriterion(condition, new java.sql.Date(value.getTime()), property);
+        }
+
+        protected void addCriterionForJDBCDate(String condition, List<Date> values, String property) {
+            if (values == null || values.size() == 0) {
+                throw new RuntimeException("Value list for " + property + " cannot be null or empty");
+            }
+            List<java.sql.Date> dateList = new ArrayList<java.sql.Date>();
+            Iterator<Date> iter = values.iterator();
+            while (iter.hasNext()) {
+                dateList.add(new java.sql.Date(iter.next().getTime()));
+            }
+            addCriterion(condition, dateList, property);
+        }
+
+        protected void addCriterionForJDBCDate(String condition, Date value1, Date value2, String property) {
+            if (value1 == null || value2 == null) {
+                throw new RuntimeException("Between values for " + property + " cannot be null");
+            }
+            addCriterion(condition, new java.sql.Date(value1.getTime()), new java.sql.Date(value2.getTime()), property);
+        }
+
+        public Criteria andDistricystationnumIsNull() {
+            addCriterion("districyStationNum is null");
             return (Criteria) this;
         }
 
-        public Criteria andNumdistricystationIsNotNull() {
-            addCriterion("numDistricyStation is not null");
+        public Criteria andDistricystationnumIsNotNull() {
+            addCriterion("districyStationNum is not null");
             return (Criteria) this;
         }
 
-        public Criteria andNumdistricystationEqualTo(Integer value) {
-            addCriterion("numDistricyStation =", value, "numdistricystation");
+        public Criteria andDistricystationnumEqualTo(Integer value) {
+            addCriterion("districyStationNum =", value, "districystationnum");
             return (Criteria) this;
         }
 
-        public Criteria andNumdistricystationNotEqualTo(Integer value) {
-            addCriterion("numDistricyStation <>", value, "numdistricystation");
+        public Criteria andDistricystationnumNotEqualTo(Integer value) {
+            addCriterion("districyStationNum <>", value, "districystationnum");
             return (Criteria) this;
         }
 
-        public Criteria andNumdistricystationGreaterThan(Integer value) {
-            addCriterion("numDistricyStation >", value, "numdistricystation");
+        public Criteria andDistricystationnumGreaterThan(Integer value) {
+            addCriterion("districyStationNum >", value, "districystationnum");
             return (Criteria) this;
         }
 
-        public Criteria andNumdistricystationGreaterThanOrEqualTo(Integer value) {
-            addCriterion("numDistricyStation >=", value, "numdistricystation");
+        public Criteria andDistricystationnumGreaterThanOrEqualTo(Integer value) {
+            addCriterion("districyStationNum >=", value, "districystationnum");
             return (Criteria) this;
         }
 
-        public Criteria andNumdistricystationLessThan(Integer value) {
-            addCriterion("numDistricyStation <", value, "numdistricystation");
+        public Criteria andDistricystationnumLessThan(Integer value) {
+            addCriterion("districyStationNum <", value, "districystationnum");
             return (Criteria) this;
         }
 
-        public Criteria andNumdistricystationLessThanOrEqualTo(Integer value) {
-            addCriterion("numDistricyStation <=", value, "numdistricystation");
+        public Criteria andDistricystationnumLessThanOrEqualTo(Integer value) {
+            addCriterion("districyStationNum <=", value, "districystationnum");
             return (Criteria) this;
         }
 
-        public Criteria andNumdistricystationIn(List<Integer> values) {
-            addCriterion("numDistricyStation in", values, "numdistricystation");
+        public Criteria andDistricystationnumIn(List<Integer> values) {
+            addCriterion("districyStationNum in", values, "districystationnum");
             return (Criteria) this;
         }
 
-        public Criteria andNumdistricystationNotIn(List<Integer> values) {
-            addCriterion("numDistricyStation not in", values, "numdistricystation");
+        public Criteria andDistricystationnumNotIn(List<Integer> values) {
+            addCriterion("districyStationNum not in", values, "districystationnum");
             return (Criteria) this;
         }
 
-        public Criteria andNumdistricystationBetween(Integer value1, Integer value2) {
-            addCriterion("numDistricyStation between", value1, value2, "numdistricystation");
+        public Criteria andDistricystationnumBetween(Integer value1, Integer value2) {
+            addCriterion("districyStationNum between", value1, value2, "districystationnum");
             return (Criteria) this;
         }
 
-        public Criteria andNumdistricystationNotBetween(Integer value1, Integer value2) {
-            addCriterion("numDistricyStation not between", value1, value2, "numdistricystation");
+        public Criteria andDistricystationnumNotBetween(Integer value1, Integer value2) {
+            addCriterion("districyStationNum not between", value1, value2, "districystationnum");
             return (Criteria) this;
         }
 
@@ -264,53 +292,53 @@ public class WeatherDataExample {
             return (Criteria) this;
         }
 
-        public Criteria andWeatheryearEqualTo(Integer value) {
-            addCriterion("weatherYear =", value, "weatheryear");
+        public Criteria andWeatheryearEqualTo(Date value) {
+            addCriterionForJDBCDate("weatherYear =", value, "weatheryear");
             return (Criteria) this;
         }
 
-        public Criteria andWeatheryearNotEqualTo(Integer value) {
-            addCriterion("weatherYear <>", value, "weatheryear");
+        public Criteria andWeatheryearNotEqualTo(Date value) {
+            addCriterionForJDBCDate("weatherYear <>", value, "weatheryear");
             return (Criteria) this;
         }
 
-        public Criteria andWeatheryearGreaterThan(Integer value) {
-            addCriterion("weatherYear >", value, "weatheryear");
+        public Criteria andWeatheryearGreaterThan(Date value) {
+            addCriterionForJDBCDate("weatherYear >", value, "weatheryear");
             return (Criteria) this;
         }
 
-        public Criteria andWeatheryearGreaterThanOrEqualTo(Integer value) {
-            addCriterion("weatherYear >=", value, "weatheryear");
+        public Criteria andWeatheryearGreaterThanOrEqualTo(Date value) {
+            addCriterionForJDBCDate("weatherYear >=", value, "weatheryear");
             return (Criteria) this;
         }
 
-        public Criteria andWeatheryearLessThan(Integer value) {
-            addCriterion("weatherYear <", value, "weatheryear");
+        public Criteria andWeatheryearLessThan(Date value) {
+            addCriterionForJDBCDate("weatherYear <", value, "weatheryear");
             return (Criteria) this;
         }
 
-        public Criteria andWeatheryearLessThanOrEqualTo(Integer value) {
-            addCriterion("weatherYear <=", value, "weatheryear");
+        public Criteria andWeatheryearLessThanOrEqualTo(Date value) {
+            addCriterionForJDBCDate("weatherYear <=", value, "weatheryear");
             return (Criteria) this;
         }
 
-        public Criteria andWeatheryearIn(List<Integer> values) {
-            addCriterion("weatherYear in", values, "weatheryear");
+        public Criteria andWeatheryearIn(List<Date> values) {
+            addCriterionForJDBCDate("weatherYear in", values, "weatheryear");
             return (Criteria) this;
         }
 
-        public Criteria andWeatheryearNotIn(List<Integer> values) {
-            addCriterion("weatherYear not in", values, "weatheryear");
+        public Criteria andWeatheryearNotIn(List<Date> values) {
+            addCriterionForJDBCDate("weatherYear not in", values, "weatheryear");
             return (Criteria) this;
         }
 
-        public Criteria andWeatheryearBetween(Integer value1, Integer value2) {
-            addCriterion("weatherYear between", value1, value2, "weatheryear");
+        public Criteria andWeatheryearBetween(Date value1, Date value2) {
+            addCriterionForJDBCDate("weatherYear between", value1, value2, "weatheryear");
             return (Criteria) this;
         }
 
-        public Criteria andWeatheryearNotBetween(Integer value1, Integer value2) {
-            addCriterion("weatherYear not between", value1, value2, "weatheryear");
+        public Criteria andWeatheryearNotBetween(Date value1, Date value2) {
+            addCriterionForJDBCDate("weatherYear not between", value1, value2, "weatheryear");
             return (Criteria) this;
         }
 
@@ -444,173 +472,193 @@ public class WeatherDataExample {
             return (Criteria) this;
         }
 
-        public Criteria andPrecipitation2020EqualTo(Integer value) {
+        public Criteria andPrecipitation2020EqualTo(String value) {
             addCriterion("precipitation2020 =", value, "precipitation2020");
             return (Criteria) this;
         }
 
-        public Criteria andPrecipitation2020NotEqualTo(Integer value) {
+        public Criteria andPrecipitation2020NotEqualTo(String value) {
             addCriterion("precipitation2020 <>", value, "precipitation2020");
             return (Criteria) this;
         }
 
-        public Criteria andPrecipitation2020GreaterThan(Integer value) {
+        public Criteria andPrecipitation2020GreaterThan(String value) {
             addCriterion("precipitation2020 >", value, "precipitation2020");
             return (Criteria) this;
         }
 
-        public Criteria andPrecipitation2020GreaterThanOrEqualTo(Integer value) {
+        public Criteria andPrecipitation2020GreaterThanOrEqualTo(String value) {
             addCriterion("precipitation2020 >=", value, "precipitation2020");
             return (Criteria) this;
         }
 
-        public Criteria andPrecipitation2020LessThan(Integer value) {
+        public Criteria andPrecipitation2020LessThan(String value) {
             addCriterion("precipitation2020 <", value, "precipitation2020");
             return (Criteria) this;
         }
 
-        public Criteria andPrecipitation2020LessThanOrEqualTo(Integer value) {
+        public Criteria andPrecipitation2020LessThanOrEqualTo(String value) {
             addCriterion("precipitation2020 <=", value, "precipitation2020");
             return (Criteria) this;
         }
 
-        public Criteria andPrecipitation2020In(List<Integer> values) {
+        public Criteria andPrecipitation2020Like(String value) {
+            addCriterion("precipitation2020 like", value, "precipitation2020");
+            return (Criteria) this;
+        }
+
+        public Criteria andPrecipitation2020NotLike(String value) {
+            addCriterion("precipitation2020 not like", value, "precipitation2020");
+            return (Criteria) this;
+        }
+
+        public Criteria andPrecipitation2020In(List<String> values) {
             addCriterion("precipitation2020 in", values, "precipitation2020");
             return (Criteria) this;
         }
 
-        public Criteria andPrecipitation2020NotIn(List<Integer> values) {
+        public Criteria andPrecipitation2020NotIn(List<String> values) {
             addCriterion("precipitation2020 not in", values, "precipitation2020");
             return (Criteria) this;
         }
 
-        public Criteria andPrecipitation2020Between(Integer value1, Integer value2) {
+        public Criteria andPrecipitation2020Between(String value1, String value2) {
             addCriterion("precipitation2020 between", value1, value2, "precipitation2020");
             return (Criteria) this;
         }
 
-        public Criteria andPrecipitation2020NotBetween(Integer value1, Integer value2) {
+        public Criteria andPrecipitation2020NotBetween(String value1, String value2) {
             addCriterion("precipitation2020 not between", value1, value2, "precipitation2020");
             return (Criteria) this;
         }
 
-        public Criteria andMaximumwindspeedIsNull() {
-            addCriterion("maximumWindSpeed is null");
+        public Criteria andMaximumwindspeadIsNull() {
+            addCriterion("maximumWindSpead is null");
             return (Criteria) this;
         }
 
-        public Criteria andMaximumwindspeedIsNotNull() {
-            addCriterion("maximumWindSpeed is not null");
+        public Criteria andMaximumwindspeadIsNotNull() {
+            addCriterion("maximumWindSpead is not null");
             return (Criteria) this;
         }
 
-        public Criteria andMaximumwindspeedEqualTo(Integer value) {
-            addCriterion("maximumWindSpeed =", value, "maximumwindspeed");
+        public Criteria andMaximumwindspeadEqualTo(Integer value) {
+            addCriterion("maximumWindSpead =", value, "maximumwindspead");
             return (Criteria) this;
         }
 
-        public Criteria andMaximumwindspeedNotEqualTo(Integer value) {
-            addCriterion("maximumWindSpeed <>", value, "maximumwindspeed");
+        public Criteria andMaximumwindspeadNotEqualTo(Integer value) {
+            addCriterion("maximumWindSpead <>", value, "maximumwindspead");
             return (Criteria) this;
         }
 
-        public Criteria andMaximumwindspeedGreaterThan(Integer value) {
-            addCriterion("maximumWindSpeed >", value, "maximumwindspeed");
+        public Criteria andMaximumwindspeadGreaterThan(Integer value) {
+            addCriterion("maximumWindSpead >", value, "maximumwindspead");
             return (Criteria) this;
         }
 
-        public Criteria andMaximumwindspeedGreaterThanOrEqualTo(Integer value) {
-            addCriterion("maximumWindSpeed >=", value, "maximumwindspeed");
+        public Criteria andMaximumwindspeadGreaterThanOrEqualTo(Integer value) {
+            addCriterion("maximumWindSpead >=", value, "maximumwindspead");
             return (Criteria) this;
         }
 
-        public Criteria andMaximumwindspeedLessThan(Integer value) {
-            addCriterion("maximumWindSpeed <", value, "maximumwindspeed");
+        public Criteria andMaximumwindspeadLessThan(Integer value) {
+            addCriterion("maximumWindSpead <", value, "maximumwindspead");
             return (Criteria) this;
         }
 
-        public Criteria andMaximumwindspeedLessThanOrEqualTo(Integer value) {
-            addCriterion("maximumWindSpeed <=", value, "maximumwindspeed");
+        public Criteria andMaximumwindspeadLessThanOrEqualTo(Integer value) {
+            addCriterion("maximumWindSpead <=", value, "maximumwindspead");
             return (Criteria) this;
         }
 
-        public Criteria andMaximumwindspeedIn(List<Integer> values) {
-            addCriterion("maximumWindSpeed in", values, "maximumwindspeed");
+        public Criteria andMaximumwindspeadIn(List<Integer> values) {
+            addCriterion("maximumWindSpead in", values, "maximumwindspead");
             return (Criteria) this;
         }
 
-        public Criteria andMaximumwindspeedNotIn(List<Integer> values) {
-            addCriterion("maximumWindSpeed not in", values, "maximumwindspeed");
+        public Criteria andMaximumwindspeadNotIn(List<Integer> values) {
+            addCriterion("maximumWindSpead not in", values, "maximumwindspead");
             return (Criteria) this;
         }
 
-        public Criteria andMaximumwindspeedBetween(Integer value1, Integer value2) {
-            addCriterion("maximumWindSpeed between", value1, value2, "maximumwindspeed");
+        public Criteria andMaximumwindspeadBetween(Integer value1, Integer value2) {
+            addCriterion("maximumWindSpead between", value1, value2, "maximumwindspead");
             return (Criteria) this;
         }
 
-        public Criteria andMaximumwindspeedNotBetween(Integer value1, Integer value2) {
-            addCriterion("maximumWindSpeed not between", value1, value2, "maximumwindspeed");
+        public Criteria andMaximumwindspeadNotBetween(Integer value1, Integer value2) {
+            addCriterion("maximumWindSpead not between", value1, value2, "maximumwindspead");
             return (Criteria) this;
         }
 
-        public Criteria andDirectionmaximumwindspeedIsNull() {
-            addCriterion("directionMaximumWindSpeed is null");
+        public Criteria andDirectionmaximumwindspeadIsNull() {
+            addCriterion("directionMaximumWindSpead is null");
             return (Criteria) this;
         }
 
-        public Criteria andDirectionmaximumwindspeedIsNotNull() {
-            addCriterion("directionMaximumWindSpeed is not null");
+        public Criteria andDirectionmaximumwindspeadIsNotNull() {
+            addCriterion("directionMaximumWindSpead is not null");
             return (Criteria) this;
         }
 
-        public Criteria andDirectionmaximumwindspeedEqualTo(Integer value) {
-            addCriterion("directionMaximumWindSpeed =", value, "directionmaximumwindspeed");
+        public Criteria andDirectionmaximumwindspeadEqualTo(String value) {
+            addCriterion("directionMaximumWindSpead =", value, "directionmaximumwindspead");
             return (Criteria) this;
         }
 
-        public Criteria andDirectionmaximumwindspeedNotEqualTo(Integer value) {
-            addCriterion("directionMaximumWindSpeed <>", value, "directionmaximumwindspeed");
+        public Criteria andDirectionmaximumwindspeadNotEqualTo(String value) {
+            addCriterion("directionMaximumWindSpead <>", value, "directionmaximumwindspead");
             return (Criteria) this;
         }
 
-        public Criteria andDirectionmaximumwindspeedGreaterThan(Integer value) {
-            addCriterion("directionMaximumWindSpeed >", value, "directionmaximumwindspeed");
+        public Criteria andDirectionmaximumwindspeadGreaterThan(String value) {
+            addCriterion("directionMaximumWindSpead >", value, "directionmaximumwindspead");
             return (Criteria) this;
         }
 
-        public Criteria andDirectionmaximumwindspeedGreaterThanOrEqualTo(Integer value) {
-            addCriterion("directionMaximumWindSpeed >=", value, "directionmaximumwindspeed");
+        public Criteria andDirectionmaximumwindspeadGreaterThanOrEqualTo(String value) {
+            addCriterion("directionMaximumWindSpead >=", value, "directionmaximumwindspead");
             return (Criteria) this;
         }
 
-        public Criteria andDirectionmaximumwindspeedLessThan(Integer value) {
-            addCriterion("directionMaximumWindSpeed <", value, "directionmaximumwindspeed");
+        public Criteria andDirectionmaximumwindspeadLessThan(String value) {
+            addCriterion("directionMaximumWindSpead <", value, "directionmaximumwindspead");
             return (Criteria) this;
         }
 
-        public Criteria andDirectionmaximumwindspeedLessThanOrEqualTo(Integer value) {
-            addCriterion("directionMaximumWindSpeed <=", value, "directionmaximumwindspeed");
+        public Criteria andDirectionmaximumwindspeadLessThanOrEqualTo(String value) {
+            addCriterion("directionMaximumWindSpead <=", value, "directionmaximumwindspead");
             return (Criteria) this;
         }
 
-        public Criteria andDirectionmaximumwindspeedIn(List<Integer> values) {
-            addCriterion("directionMaximumWindSpeed in", values, "directionmaximumwindspeed");
+        public Criteria andDirectionmaximumwindspeadLike(String value) {
+            addCriterion("directionMaximumWindSpead like", value, "directionmaximumwindspead");
             return (Criteria) this;
         }
 
-        public Criteria andDirectionmaximumwindspeedNotIn(List<Integer> values) {
-            addCriterion("directionMaximumWindSpeed not in", values, "directionmaximumwindspeed");
+        public Criteria andDirectionmaximumwindspeadNotLike(String value) {
+            addCriterion("directionMaximumWindSpead not like", value, "directionmaximumwindspead");
             return (Criteria) this;
         }
 
-        public Criteria andDirectionmaximumwindspeedBetween(Integer value1, Integer value2) {
-            addCriterion("directionMaximumWindSpeed between", value1, value2, "directionmaximumwindspeed");
+        public Criteria andDirectionmaximumwindspeadIn(List<String> values) {
+            addCriterion("directionMaximumWindSpead in", values, "directionmaximumwindspead");
             return (Criteria) this;
         }
 
-        public Criteria andDirectionmaximumwindspeedNotBetween(Integer value1, Integer value2) {
-            addCriterion("directionMaximumWindSpeed not between", value1, value2, "directionmaximumwindspeed");
+        public Criteria andDirectionmaximumwindspeadNotIn(List<String> values) {
+            addCriterion("directionMaximumWindSpead not in", values, "directionmaximumwindspead");
+            return (Criteria) this;
+        }
+
+        public Criteria andDirectionmaximumwindspeadBetween(String value1, String value2) {
+            addCriterion("directionMaximumWindSpead between", value1, value2, "directionmaximumwindspead");
+            return (Criteria) this;
+        }
+
+        public Criteria andDirectionmaximumwindspeadNotBetween(String value1, String value2) {
+            addCriterion("directionMaximumWindSpead not between", value1, value2, "directionmaximumwindspead");
             return (Criteria) this;
         }
 
@@ -1284,52 +1332,62 @@ public class WeatherDataExample {
             return (Criteria) this;
         }
 
-        public Criteria andDirectionmaxwindspeedEqualTo(Integer value) {
+        public Criteria andDirectionmaxwindspeedEqualTo(String value) {
             addCriterion("directionMaxWindSpeed =", value, "directionmaxwindspeed");
             return (Criteria) this;
         }
 
-        public Criteria andDirectionmaxwindspeedNotEqualTo(Integer value) {
+        public Criteria andDirectionmaxwindspeedNotEqualTo(String value) {
             addCriterion("directionMaxWindSpeed <>", value, "directionmaxwindspeed");
             return (Criteria) this;
         }
 
-        public Criteria andDirectionmaxwindspeedGreaterThan(Integer value) {
+        public Criteria andDirectionmaxwindspeedGreaterThan(String value) {
             addCriterion("directionMaxWindSpeed >", value, "directionmaxwindspeed");
             return (Criteria) this;
         }
 
-        public Criteria andDirectionmaxwindspeedGreaterThanOrEqualTo(Integer value) {
+        public Criteria andDirectionmaxwindspeedGreaterThanOrEqualTo(String value) {
             addCriterion("directionMaxWindSpeed >=", value, "directionmaxwindspeed");
             return (Criteria) this;
         }
 
-        public Criteria andDirectionmaxwindspeedLessThan(Integer value) {
+        public Criteria andDirectionmaxwindspeedLessThan(String value) {
             addCriterion("directionMaxWindSpeed <", value, "directionmaxwindspeed");
             return (Criteria) this;
         }
 
-        public Criteria andDirectionmaxwindspeedLessThanOrEqualTo(Integer value) {
+        public Criteria andDirectionmaxwindspeedLessThanOrEqualTo(String value) {
             addCriterion("directionMaxWindSpeed <=", value, "directionmaxwindspeed");
             return (Criteria) this;
         }
 
-        public Criteria andDirectionmaxwindspeedIn(List<Integer> values) {
+        public Criteria andDirectionmaxwindspeedLike(String value) {
+            addCriterion("directionMaxWindSpeed like", value, "directionmaxwindspeed");
+            return (Criteria) this;
+        }
+
+        public Criteria andDirectionmaxwindspeedNotLike(String value) {
+            addCriterion("directionMaxWindSpeed not like", value, "directionmaxwindspeed");
+            return (Criteria) this;
+        }
+
+        public Criteria andDirectionmaxwindspeedIn(List<String> values) {
             addCriterion("directionMaxWindSpeed in", values, "directionmaxwindspeed");
             return (Criteria) this;
         }
 
-        public Criteria andDirectionmaxwindspeedNotIn(List<Integer> values) {
+        public Criteria andDirectionmaxwindspeedNotIn(List<String> values) {
             addCriterion("directionMaxWindSpeed not in", values, "directionmaxwindspeed");
             return (Criteria) this;
         }
 
-        public Criteria andDirectionmaxwindspeedBetween(Integer value1, Integer value2) {
+        public Criteria andDirectionmaxwindspeedBetween(String value1, String value2) {
             addCriterion("directionMaxWindSpeed between", value1, value2, "directionmaxwindspeed");
             return (Criteria) this;
         }
 
-        public Criteria andDirectionmaxwindspeedNotBetween(Integer value1, Integer value2) {
+        public Criteria andDirectionmaxwindspeedNotBetween(String value1, String value2) {
             addCriterion("directionMaxWindSpeed not between", value1, value2, "directionmaxwindspeed");
             return (Criteria) this;
         }

@@ -1,7 +1,5 @@
 package com.zxh.ssm.module.user.mapper;
 
-import com.zxh.ssm.module.user.pojo.PatientAddress;
-import com.zxh.ssm.module.user.pojo.PatientAddressExample;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
