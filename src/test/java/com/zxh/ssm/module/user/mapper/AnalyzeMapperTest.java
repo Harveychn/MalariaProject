@@ -29,7 +29,7 @@ public class AnalyzeMapperTest {
     public void analyzeByCareer() throws Exception {
         AnalyzeVo analyzeVo = new AnalyzeVo();
         analyzeVo.setBeginYear(2005);
-        analyzeVo.setEndYear(2011);
+//        analyzeVo.setEndYear(2011);
         analyzeVo.setProvince("云南");
         List<CareerAnalyzeRe> careerAnalyzeReList = analyzeMapper.analyzeByCareer(analyzeVo);
         for (CareerAnalyzeRe result: careerAnalyzeReList) {
@@ -42,7 +42,7 @@ public class AnalyzeMapperTest {
     public void analyzeBySex()throws Exception{
         AnalyzeVo analyzeVo = new AnalyzeVo();
         analyzeVo.setBeginYear(2005);
-        analyzeVo.setEndYear(2011);
+//        analyzeVo.setEndYear(2011);
         analyzeVo.setProvince("");
         List<SexAnalyzeRe> sexAnalyzeReList = analyzeMapper.analyzeBySex(analyzeVo);
         for (SexAnalyzeRe result:sexAnalyzeReList            ) {
