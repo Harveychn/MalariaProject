@@ -2,12 +2,14 @@ package com.zxh.ssm.module.user.mapper;
 
 import com.zxh.ssm.module.user.pojo.AnalyzeVo;
 import com.zxh.ssm.module.user.pojo.CareerAnalyzeRe;
+import com.zxh.ssm.module.user.pojo.SexAnalyzeRe;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import javax.annotation.Resource;
+import javax.annotation.Resources;
 
 import java.util.List;
 
@@ -34,6 +36,18 @@ public class AnalyzeMapperTest {
             System.out.println(result.getCareerCategory()+" : "+result.getPatientNum());
         }
         System.out.println("===Over===");
+    }
+
+    @Test
+    public void analyzeBySex()throws Exception{
+        AnalyzeVo analyzeVo = new AnalyzeVo();
+        analyzeVo.setBeginYear(2005);
+        analyzeVo.setEndYear(2011);
+        analyzeVo.setProvince("");
+        List<SexAnalyzeRe> sexAnalyzeReList = analyzeMapper.analyzeBySex(analyzeVo);
+        for (SexAnalyzeRe result:sexAnalyzeReList            ) {
+            System.out.println(result.getSex()+" : "+result.getPatientNum());
+        }
     }
 
 }
