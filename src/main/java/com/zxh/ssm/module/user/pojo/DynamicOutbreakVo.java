@@ -8,7 +8,35 @@ import java.util.List;
 public class DynamicOutbreakVo {
     private int year;
     private int month;
+    private List<Integer> years;
+    private String province;
+
     private String address;
+    private int addressCount;
+
+    public List<Integer> getYears() {
+        return years;
+    }
+
+    public void setYears(List<Integer> years) {
+        this.years = years;
+    }
+
+    public int getAddressCount() {
+        return addressCount;
+    }
+
+    public void setAddressCount(int addressCount) {
+        this.addressCount = addressCount;
+    }
+
+    public String getProvince() {
+        return province;
+    }
+
+    public void setProvince(String province) {
+        this.province = province;
+    }
 
     public String getAddress() {
         return address;

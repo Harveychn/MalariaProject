@@ -1,6 +1,7 @@
 package com.zxh.ssm.module.user.service.impl;
 
 import com.zxh.ssm.module.user.mapper.DynamicOutbreakMapper;
+import com.zxh.ssm.module.user.pojo.DynamicOutbreakRe;
 import com.zxh.ssm.module.user.pojo.DynamicOutbreakVo;
 import com.zxh.ssm.module.user.service.DynamicOutbreakService;
 import org.springframework.stereotype.Service;
@@ -16,7 +17,7 @@ public class DynamicOutbreakServiceImpl implements DynamicOutbreakService{
     @Resource
     private DynamicOutbreakMapper dynamicOutbreakMapper;
     @Override
-    public List<String> findAddressList(DynamicOutbreakVo dynamicOutbreakVo) throws Exception {
+    public List<DynamicOutbreakRe> findAddressList(DynamicOutbreakVo dynamicOutbreakVo) throws Exception {
         return dynamicOutbreakMapper.selectAddressByYearMonth(dynamicOutbreakVo);
     }
 }

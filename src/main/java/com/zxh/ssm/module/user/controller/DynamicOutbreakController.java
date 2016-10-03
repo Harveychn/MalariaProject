@@ -1,5 +1,6 @@
 package com.zxh.ssm.module.user.controller;
 
+import com.zxh.ssm.module.user.pojo.DynamicOutbreakRe;
 import com.zxh.ssm.module.user.pojo.DynamicOutbreakVo;
 import com.zxh.ssm.module.user.service.DynamicOutbreakService;
 import org.springframework.stereotype.Controller;
@@ -22,10 +23,11 @@ public class DynamicOutbreakController {
     @RequestMapping("/subModule1")
     public
     @ResponseBody
-    List<String> subModule1(DynamicOutbreakVo dynamicOutbreakVo) throws Exception {
+    List<DynamicOutbreakRe> subModule1(DynamicOutbreakVo dynamicOutbreakVo) throws Exception {
         System.out.println(" dynamicOutbreakVo.year :" + dynamicOutbreakVo.getYear() +
-                "\ndynamicOutbreakVo.month :" + dynamicOutbreakVo.getMonth());
-        List<String> address = dynamicOutbreakService.findAddressList(dynamicOutbreakVo);
+                "\ndynamicOutbreakVo.month :" + dynamicOutbreakVo.getMonth() +
+                "\ndynamicOutbreakVo.province : " + dynamicOutbreakVo.getProvince());
+        List<DynamicOutbreakRe> address = dynamicOutbreakService.findAddressList(dynamicOutbreakVo);
         System.out.println(" address List : " + address);
         return address;
     }

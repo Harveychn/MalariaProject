@@ -1,5 +1,6 @@
 package com.zxh.ssm.module.user.mapper;
 
+import com.zxh.ssm.module.user.pojo.DynamicOutbreakRe;
 import com.zxh.ssm.module.user.pojo.DynamicOutbreakVo;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -28,8 +29,9 @@ public class DynamicOutbreakMapperTest {
         dynamicOutbreakVo.setYear(2005);
         dynamicOutbreakVo.setMonth(1);
 //        List<DynamicOutbreakVo> result = dynamicOutbreakMapper.selectAddressByYearMonth(dynamicOutbreakVo);
-        List<String> addresultList = dynamicOutbreakMapper.selectAddressByYearMonth(dynamicOutbreakVo);
-        System.out.println("  ");
+        List<DynamicOutbreakRe> addresultList = dynamicOutbreakMapper.selectAddressByYearMonth(dynamicOutbreakVo);
+        System.out.println("  getAddress : "+addresultList.get(0).getAddress());
+        System.out.println(" getAddressCount() :"+addresultList.get(0).getAddressCount());
     }
 
 }
