@@ -19,5 +19,40 @@
     <span>month:<input type="text" name="month"/></span>
     <input type="submit"/>
 </form>
+
+<br>
+<h3>careerModule.action</h3>
+<form action="/AnalyzeController/careerModule.action" method="post">
+    <span>province:<input type="text" name="province"/></span>
+    <span>beginYear:<input type="text" name="beginYear"/></span>
+    <span>endYear:<input type="text" name="endYear"/></span>
+    <input type="submit"/>
+</form>
+<br>
+<h3>ageGroupModule.action</h3>
+<form action="/AnalyzeController/ageGroupModule.action" method="post">
+    <span>province:<input type="text" name="province"/></span>
+    <span>beginYear:<input type="text" name="beginYear"/></span>
+    <span>endYear:<input type="text" name="endYear"/></span>
+    <input type="submit"/>
+</form>
+<br>
+<h3>sexModule.action</h3>
+<form action="/AnalyzeController/sexModule.action" method="post">
+    <span>province:<input type="text" name="province"/></span>
+    <span>beginYear:<input type="text" name="beginYear"/></span>
+    <span>endYear:<input type="text" name="endYear"/></span>
+    <input type="submit"/>
+</form>
+<br/>
+
+<h3>uploadFile.action</h3>
+<form action="/UploadFile/ToPatient_information.action" method="post" enctype="multipart/form-data">
+    <div><input type="file" name="file" accept="application/vnd.ms-excel,
+                    application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"></div>
+    <input type="submit" value="提交文件"/>
+</form>
+
+
 </body>
 </html>

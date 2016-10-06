@@ -43,11 +43,21 @@
     <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
         <!-- 默认编码 -->
         <property name="defaultEncoding" value="UTF-8"/>
-        <!-- 文件大小最大值 上传文件大小限制为10M，10*1024*1024 -->
-        <property name="maxUploadSize" value="10485760"/>
+        <!-- 文件大小最大值 上传文件大小限制为50M，50*1024*1024 -->
+        <property name="maxUploadSize" value="52428800"/>
         <!-- 内存中的最大值 -->
-        <property name="maxInMemorySize" value="4096"/>
+        <property name="maxInMemorySize" value="40960"/>
     </bean>
     <!--文件上传 end-->
+    <!-- SpringMVC在超出上传文件限制时，会抛出org.springframework.web.multipart.MaxUploadSizeExceededException -->
+    <!-- 该异常是SpringMVC在检查上传的文件信息时抛出来的，而且此时还没有进入到Controller方法中 -->
+    <bean id="exceptionResolver" class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+        <property name="exceptionMappings">
+            <props>
+                <!-- 遇到MaxUploadSizeExceededException异常时，自动跳转到/WEB-INF/view/error_fileupload.jsp页面 -->
+                <prop key="org.springframework.web.multipart.MaxUploadSizeExceededException">/error/error_fileUpload</prop>
+            </props>
+        </property>
+    </bean>
 
 </beans>
