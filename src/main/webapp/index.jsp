@@ -13,6 +13,7 @@
 <body>
 
 <br>
+<h3>subModule1.action</h3>
 <form action="/DynamicOutbreak/subModule1.action" method="post">
     <span>province:<input type="text" name="province"/></span>
     <span>year :<input type="text" name="year"/></span>
@@ -46,9 +47,16 @@
 </form>
 <br/>
 
-<h3>uploadFile.action</h3>
+<h3>UploadFile/ToPatient_information.action</h3>
 <form action="/UploadFile/ToPatient_information.action" method="post" enctype="multipart/form-data">
-    <div><input type="file" name="file" accept="application/vnd.ms-excel,
+    <div><input type="file" name="toPatientFile" accept="application/vnd.ms-excel,
+                    application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"></div>
+    <input type="submit" value="提交文件"/>
+</form>
+
+<h3></h3>
+<form action="" method="post" enctype="multipart/form-data">
+    <div><input type="file" name="toPatientCasesFile" accept="application/vnd.ms-excel,
                     application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"></div>
     <input type="submit" value="提交文件"/>
 </form>
