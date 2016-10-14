@@ -12,6 +12,12 @@
 </head>
 <body>
 
+<h3></h3>
+<form action="/DownloadDBData/fieldNameDownloadable" method="post">
+    <span>dataCategory:<input type="text" name="dataCategory"/></span>
+    <input type="submit" value="提交"/>
+</form>
+
 <br>
 <h3>subModule1.action</h3>
 <form action="/DynamicOutbreak/subModule1.action" method="post">
@@ -47,19 +53,6 @@
 </form>
 <br/>
 
-<h3>UploadFile/ToPatient_information.action</h3>
-<form action="/UploadFile/ToPatient_information.action" method="post" enctype="multipart/form-data">
-    <div><input type="file" name="toPatientFile" accept="application/vnd.ms-excel,
-                    application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"></div>
-    <input type="submit" value="提交文件"/>
-</form>
-
-<h3></h3>
-<form action="" method="post" enctype="multipart/form-data">
-    <div><input type="file" name="toPatientCasesFile" accept="application/vnd.ms-excel,
-                    application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"></div>
-    <input type="submit" value="提交文件"/>
-</form>
 
 
 </body>
