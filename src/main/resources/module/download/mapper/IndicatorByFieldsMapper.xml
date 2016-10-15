@@ -16,4 +16,16 @@
         GROUP BY fieldName
         ORDER BY displayName ASC
     </select>
+
+    <select id="selectBelongTables" resultType="String">
+        SELECT DISTINCT(belongTable) FROM indicator
+    </select>
+
+    <select id="selectData" parameterType="com.zxh.ssm.module.download.pojo.SQLQuery" resultType="java.util.Map"
+            statementType="STATEMENT">
+    SELECT ${select} FROM ${from}
+    <where>
+        ${where}
+    </where>
+    </select>
 </mapper>

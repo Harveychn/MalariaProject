@@ -8,7 +8,8 @@ import java.util.List;
  * Created by 郑晓辉 on 2016/10/14.
  */
 public class GetDownData {
-    private List<Indicator> indicators;
+    private List<FromTable> fromTables;
+    private List<SelectField> selectFields;
     //数据地区
     private String location;
     //时间区间
@@ -40,13 +41,6 @@ public class GetDownData {
         this.endYear = endYear;
     }
 
-    public List<Indicator> getIndicators() {
-        return indicators;
-    }
-
-    public void setIndicators(List<Indicator> indicators) {
-        this.indicators = indicators;
-    }
 
     public String getLocation() {
         return location;
@@ -78,5 +72,21 @@ public class GetDownData {
 
     public void setSex(int sex) {
         this.sex = sex;
+    }
+
+    public List<FromTable> getFromTables() {
+        return fromTables;
+    }
+
+    public void setFromTables(List<FromTable> fromTables) {
+        this.fromTables = fromTables;
+    }
+
+    public List<SelectField> getSelectFields() {
+        return selectFields;
+    }
+
+    public void setSelectFields(List<SelectField> selectFields) {
+        this.selectFields = selectFields;
     }
 }
