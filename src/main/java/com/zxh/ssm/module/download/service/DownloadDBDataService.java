@@ -1,6 +1,8 @@
 package com.zxh.ssm.module.download.service;
 
 import com.zxh.ssm.module.download.pojo.CategoryFieldsRe;
+import com.zxh.ssm.module.download.pojo.DownloadParamVo;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 
 import java.util.List;
 
@@ -9,4 +11,6 @@ import java.util.List;
  */
 public interface DownloadDBDataService {
     List<CategoryFieldsRe> getFieldsNameDownload(String category) throws Exception;
+
+    HSSFWorkbook downloadData(DownloadParamVo downloadParamVo) throws Exception;
 }

@@ -16,5 +16,5 @@ public interface IndicatorByFieldsMapper {
 
     List<String> selectBelongTables() throws Exception;
 
-    List<Map<String,List<String>>> selectData(SQLQuery sqlQuery)throws Exception;
+    List<Map<String,Object>> selectData(SQLQuery sqlQuery)throws Exception;
 }

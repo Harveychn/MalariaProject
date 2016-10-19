@@ -13,6 +13,11 @@
 </head>
 <body>
 <div align="center">
+    <form action="/DownloadDBData/downloadExcel" method="post">
+        <input type="submit"/>
+    </form>
+</div>
+<div align="center">
     <h3>四级联动测试</h3>
     <hr/>
     选择地区：
