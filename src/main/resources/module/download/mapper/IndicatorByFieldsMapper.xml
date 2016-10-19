@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.zxh.ssm.module.download.mapper.IndicatorByFieldsMapper">
     <select id="selectIndicatorByFields"
-            resultType="com.zxh.ssm.module.user.pojo.Indicator">
+            resultType="com.zxh.ssm.module.whole.pojo.Indicator">
         SELECT * FROM indicator
         <where>
             <if test="list!=null">

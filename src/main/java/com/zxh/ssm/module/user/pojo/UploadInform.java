@@ -1,5 +1,7 @@
 package com.zxh.ssm.module.user.pojo;
 
+import com.zxh.ssm.module.whole.pojo.*;
+
 /**
  * Created by 郑晓辉 on 2016/10/13.
  */

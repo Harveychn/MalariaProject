@@ -1,8 +1,10 @@
 package com.zxh.ssm.module.user.service.impl;
 
-import com.zxh.ssm.module.user.mapper.CaseRevisedInformationMapper;
+import com.zxh.ssm.module.whole.mapper.CaseRevisedInformationMapper;
 import com.zxh.ssm.module.user.pojo.*;
 import com.zxh.ssm.module.user.service.UploadToCaseRevisedService;
+import com.zxh.ssm.module.whole.pojo.CaseRevisedInformation;
+import com.zxh.ssm.module.whole.pojo.CaseRevisedInformationKey;
 import org.apache.poi.hssf.usermodel.HSSFCell;
 import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;

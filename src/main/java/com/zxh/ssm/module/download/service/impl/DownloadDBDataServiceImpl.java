@@ -4,9 +4,7 @@ import com.zxh.ssm.module.download.mapper.CategoryFieldsMapper;
 import com.zxh.ssm.module.download.mapper.IndicatorByFieldsMapper;
 import com.zxh.ssm.module.download.pojo.*;
 import com.zxh.ssm.module.download.service.DownloadDBDataService;
-import com.zxh.ssm.module.user.mapper.IndicatorMapper;
-import com.zxh.ssm.module.user.pojo.Indicator;
-import com.zxh.ssm.module.user.pojo.IndicatorExample;
+import com.zxh.ssm.module.whole.pojo.Indicator;
 import org.apache.poi.hssf.usermodel.HSSFCell;
 import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
@@ -14,10 +12,6 @@ import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.OutputStream;
 import java.util.*;
 
 /**

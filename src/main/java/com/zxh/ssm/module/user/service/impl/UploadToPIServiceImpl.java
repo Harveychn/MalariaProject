@@ -1,8 +1,10 @@
 package com.zxh.ssm.module.user.service.impl;
 
-import com.zxh.ssm.module.user.mapper.PatientInformationMapper;
+import com.zxh.ssm.module.whole.mapper.PatientInformationMapper;
 import com.zxh.ssm.module.user.pojo.*;
 import com.zxh.ssm.module.user.service.UploadToPIService;
+import com.zxh.ssm.module.whole.pojo.PatientInformation;
+import com.zxh.ssm.module.whole.pojo.PatientInformationKey;
 import org.apache.poi.hssf.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;

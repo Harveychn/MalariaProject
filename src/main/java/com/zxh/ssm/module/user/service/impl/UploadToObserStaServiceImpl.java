@@ -1,8 +1,9 @@
 package com.zxh.ssm.module.user.service.impl;
 
-import com.zxh.ssm.module.user.mapper.MeteorologicalStationInsformationMapper;
+import com.zxh.ssm.module.whole.mapper.MeteorologicalStationInsformationMapper;
 import com.zxh.ssm.module.user.pojo.*;
 import com.zxh.ssm.module.user.service.UploadToObserStaService;
+import com.zxh.ssm.module.whole.pojo.MeteorologicalStationInsformation;
 import org.apache.poi.hssf.usermodel.HSSFCell;
 import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;

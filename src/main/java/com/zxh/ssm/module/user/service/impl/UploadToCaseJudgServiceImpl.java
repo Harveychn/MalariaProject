@@ -1,8 +1,10 @@
 package com.zxh.ssm.module.user.service.impl;
 
-import com.zxh.ssm.module.user.mapper.CaseJudgmentInformationMapper;
+import com.zxh.ssm.module.whole.mapper.CaseJudgmentInformationMapper;
 import com.zxh.ssm.module.user.pojo.*;
 import com.zxh.ssm.module.user.service.UploadToCaseJudgService;
+import com.zxh.ssm.module.whole.pojo.CaseJudgmentInformation;
+import com.zxh.ssm.module.whole.pojo.CaseJudgmentInformationKey;
 import org.apache.poi.hssf.usermodel.HSSFCell;
 import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;

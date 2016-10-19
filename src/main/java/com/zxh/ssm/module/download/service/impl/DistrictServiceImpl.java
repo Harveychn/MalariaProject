@@ -1,7 +1,7 @@
 package com.zxh.ssm.module.download.service.impl;
 
 import com.zxh.ssm.module.download.mapper.DistrictInformationMapper;
-import com.zxh.ssm.module.download.pojo.FourLevelLinkage;
+import com.zxh.ssm.module.whole.pojo.FourLevelLinkage;
 import com.zxh.ssm.module.download.service.DistrictService;
 import org.springframework.stereotype.Service;
 

@@ -1,6 +1,6 @@
 package com.zxh.ssm.module.download.controller;
 
-import com.zxh.ssm.module.download.pojo.FourLevelLinkage;
+import com.zxh.ssm.module.whole.pojo.FourLevelLinkage;
 import com.zxh.ssm.module.download.service.DistrictService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

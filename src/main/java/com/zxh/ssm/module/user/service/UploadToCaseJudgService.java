@@ -1,6 +1,6 @@
 package com.zxh.ssm.module.user.service;
 
-import com.zxh.ssm.module.user.pojo.CaseJudgmentInformation;
+import com.zxh.ssm.module.whole.pojo.CaseJudgmentInformation;
 import com.zxh.ssm.module.user.pojo.ErrorCaseJudgInfor;
 import com.zxh.ssm.module.user.pojo.UploadDBMessage;
 

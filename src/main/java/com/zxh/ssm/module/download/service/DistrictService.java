@@ -1,6 +1,6 @@
 package com.zxh.ssm.module.download.service;
 
-import com.zxh.ssm.module.download.pojo.FourLevelLinkage;
+import com.zxh.ssm.module.whole.pojo.FourLevelLinkage;
 
 import java.util.List;
 

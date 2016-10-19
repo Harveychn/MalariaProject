@@ -1,9 +1,10 @@
 package com.zxh.ssm.module.user.service.impl;
 
-import com.zxh.ssm.module.user.mapper.CaseReportInformationMapper;
+import com.zxh.ssm.module.whole.mapper.CaseReportInformationMapper;
 import com.zxh.ssm.module.user.pojo.*;
-import com.zxh.ssm.module.user.service.UploadToCardInforService;
 import com.zxh.ssm.module.user.service.UploadToCaseReportService;
+import com.zxh.ssm.module.whole.pojo.CaseReportInformation;
+import com.zxh.ssm.module.whole.pojo.CaseReportInformationKey;
 import org.apache.poi.hssf.usermodel.HSSFCell;
 import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;

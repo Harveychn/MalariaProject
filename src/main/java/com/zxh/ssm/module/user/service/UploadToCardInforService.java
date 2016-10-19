@@ -1,6 +1,6 @@
 package com.zxh.ssm.module.user.service;
 
-import com.zxh.ssm.module.user.pojo.CardInformation;
+import com.zxh.ssm.module.whole.pojo.CardInformation;
 import com.zxh.ssm.module.user.pojo.ErrorCardInfor;
 import com.zxh.ssm.module.user.pojo.UploadDBMessage;
 

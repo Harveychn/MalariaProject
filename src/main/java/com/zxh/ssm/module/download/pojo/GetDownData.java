@@ -1,7 +1,5 @@
 package com.zxh.ssm.module.download.pojo;
 
-import com.zxh.ssm.module.user.pojo.Indicator;
-
 import java.util.List;
 
 /**

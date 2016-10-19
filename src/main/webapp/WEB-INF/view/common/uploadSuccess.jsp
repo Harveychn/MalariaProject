@@ -1,6 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page import="java.util.List" %>
-<%@ page import="com.zxh.ssm.module.user.pojo.*" %><%--
+<%@ page import="com.zxh.ssm.module.user.pojo.*" %>
+<%@ page import="com.zxh.ssm.module.whole.pojo.MeteorologicalStationInsformation" %><%--
   Created by IntelliJ IDEA.
   User: 郑晓辉
   Date: 2016/10/6

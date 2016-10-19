@@ -1,7 +1,7 @@
 package com.zxh.ssm.module.user.service;
 
 import com.zxh.ssm.module.user.pojo.ErrorObserStaInfor;
-import com.zxh.ssm.module.user.pojo.MeteorologicalStationInsformation;
+import com.zxh.ssm.module.whole.pojo.MeteorologicalStationInsformation;
 import com.zxh.ssm.module.user.pojo.UploadDBMessage;
 
 /**

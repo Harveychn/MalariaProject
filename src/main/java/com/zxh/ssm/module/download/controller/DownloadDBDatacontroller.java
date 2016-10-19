@@ -1,11 +1,8 @@
 package com.zxh.ssm.module.download.controller;
 
-import com.sun.deploy.net.HttpResponse;
-import com.zxh.ssm.module.download.mapper.IndicatorByFieldsMapper;
 import com.zxh.ssm.module.download.pojo.CategoryFieldsRe;
 import com.zxh.ssm.module.download.pojo.DownloadParamVo;
 import com.zxh.ssm.module.download.service.DownloadDBDataService;
-import com.zxh.ssm.module.user.pojo.Indicator;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

@@ -1,10 +1,8 @@
 package com.zxh.ssm.module.download.mapper;
 
 import com.zxh.ssm.module.download.pojo.SQLQuery;
-import com.zxh.ssm.module.user.pojo.Indicator;
-import org.apache.ibatis.annotations.Select;
+import com.zxh.ssm.module.whole.pojo.Indicator;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 

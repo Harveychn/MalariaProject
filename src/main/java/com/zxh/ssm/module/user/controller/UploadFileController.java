@@ -2,6 +2,7 @@ package com.zxh.ssm.module.user.controller;
 
 import com.zxh.ssm.module.user.pojo.*;
 import com.zxh.ssm.module.user.service.*;
+import com.zxh.ssm.module.whole.pojo.*;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;

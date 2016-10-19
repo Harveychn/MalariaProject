@@ -1,8 +1,10 @@
 package com.zxh.ssm.module.user.service.impl;
 
-import com.zxh.ssm.module.user.mapper.WeatherDataMapper;
+import com.zxh.ssm.module.whole.mapper.WeatherDataMapper;
 import com.zxh.ssm.module.user.pojo.*;
 import com.zxh.ssm.module.user.service.UploadToWeatherService;
+import com.zxh.ssm.module.whole.pojo.WeatherData;
+import com.zxh.ssm.module.whole.pojo.WeatherDataKey;
 import org.apache.poi.hssf.usermodel.HSSFCell;
 import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;

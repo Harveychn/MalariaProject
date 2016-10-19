@@ -1,7 +1,7 @@
 package com.zxh.ssm.module.user.service;
 
 import com.zxh.ssm.module.user.pojo.ErrorPatientCaseInfor;
-import com.zxh.ssm.module.user.pojo.PatientCasesInformation;
+import com.zxh.ssm.module.whole.pojo.PatientCasesInformation;
 import com.zxh.ssm.module.user.pojo.UploadDBMessage;
 
 /**

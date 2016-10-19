@@ -1,8 +1,10 @@
 package com.zxh.ssm.module.user.service.impl;
 
-import com.zxh.ssm.module.user.mapper.CardInformationMapper;
+import com.zxh.ssm.module.whole.mapper.CardInformationMapper;
 import com.zxh.ssm.module.user.pojo.*;
 import com.zxh.ssm.module.user.service.UploadToCardInforService;
+import com.zxh.ssm.module.whole.pojo.CardInformation;
+import com.zxh.ssm.module.whole.pojo.CardInformationKey;
 import org.apache.poi.hssf.usermodel.HSSFCell;
 import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;

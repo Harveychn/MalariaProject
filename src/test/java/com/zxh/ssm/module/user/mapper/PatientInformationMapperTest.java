@@ -1,14 +1,13 @@
 package com.zxh.ssm.module.user.mapper;
 
-import com.zxh.ssm.module.user.pojo.PatientInformationKey;
+import com.zxh.ssm.module.whole.pojo.PatientInformationKey;
+import com.zxh.ssm.module.whole.mapper.PatientInformationMapper;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import javax.annotation.Resource;
-
-import java.util.Date;
 
 /**
  * Created by 郑晓辉 on 2016/10/1.
