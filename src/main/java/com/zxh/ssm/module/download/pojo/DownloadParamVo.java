@@ -12,6 +12,7 @@ import java.util.List;
  * 5.性别
  */
 public class DownloadParamVo {
+    private String category;
     //用户选择的展示数据字段
     private List<String> selectedName;
     //数据地区
@@ -27,6 +28,14 @@ public class DownloadParamVo {
     private int maxAge;
     //性别：        0:全部        1：男        2：女
     private int sex;
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
 
     public int getBeginYear() {
         return beginYear;

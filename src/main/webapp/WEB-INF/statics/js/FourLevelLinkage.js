@@ -4,16 +4,17 @@
 $(function () {
     $.ajax({
         type: "get",
-        url: "/getProvinces.do",
+        url: "/district/getProvinces.do",
         dataType: "json",
         success: function (data) {
             var selPro = data.data[0];
             $.each(data.data, function (i, item) {
                 var $option = '<option code=' + item.id + ' value=' + item.name + '>' + item.name + '</option>';
                 $("#province").append($option);
-            })
-            $('#province option[value="' + selPro.name + '"]').attr("selected", "true");
-            var cityUrl = "/getCities.do?provinceId=" + selPro.id;
+            });
+            // $('#province option[value="' + selPro.name + '"]').attr("selected", "true");
+            $('#province option[value="未选"]').attr("selected", "true");
+            var cityUrl = "/district/getCities.do?provinceId=" + selPro.id;
             $.ajax({
                 url: cityUrl,
                 success: function (data) {
@@ -21,9 +22,10 @@ $(function () {
                     $.each(data.data, function (i, item) {
                         var $option = '<option code=' + item.id + ' value=' + item.name + '>' + item.name + '</option>';
                         $('#city').append($option);
-                    })
-                    $('#city option[value="' + selCity.name + '"]').attr("selected", "true");
-                    var countyUrl = "/getCounties.do?cityId=" + selCity.id;
+                    });
+                    // $('#city option[value="' + selCity.name + '"]').attr("selected", "true");
+                    $('#city option[value="未选"]').attr("selected", "true");
+                    var countyUrl = "/district/getCounties.do?cityId=" + selCity.id;
                     $.ajax({
                         url: countyUrl,
                         success: function (data) {
@@ -31,16 +33,17 @@ $(function () {
                             $.each(data.data, function (i, item) {
                                 var $option = '<option code=' + item.id + ' value=' + item.name + '>' + item.name + '</option>';
                                 $('#county').append($option);
-                            })
-                            $('#county option[value="' + selCounty.name + '"]').attr("selected", "true");
-                            var villageUrl = "/getVillages.do?countyId=" + selCounty.id;
+                            });
+                            // $('#county option[value="' + selCounty.name + '"]').attr("selected", "true");
+                            $('#county option[value="未选"]').attr("selected", "true");
+                            var villageUrl = "/district/getVillages.do?countyId=" + selCounty.id;
                             $.ajax({
                                 url: villageUrl,
                                 success: function (data) {
                                     $.each(data.data, function (i, item) {
                                         var $option = '<option code=' + item.id + ' value=' + item.name + '>' + item.name + '</option>';
                                         $('#village').append($option);
-                                    })
+                                    });
                                     $('#village').attr('villageId', $('#village').find('option').eq(0).attr('code'));
                                 }
                             })
@@ -55,26 +58,26 @@ $(function () {
 $('#province').change(function () {
     var _this = $(this);
     var provinceCode = _this.find('option:selected').attr('code');
-    if (undefined!=provinceCode) {
-        var cityUrl = "/getCities.do?provinceId=" + provinceCode;
+    if (undefined != provinceCode) {
+        var cityUrl = "/district/getCities.do?provinceId=" + provinceCode;
     } else {
-        var cityUrl = "/getCities.do?provinceId=0";
+        var cityUrl = "/district/getCities.do?provinceId=0";
     }
     masterAddrC(cityUrl, 'city');
     setTimeout(function () {
         var cityCode = $('#city').find('option').eq(0).attr('code');
         if (cityCode != undefined) {
-            var countyUrl = '/getCounties.do?cityId=' + cityCode;
+            var countyUrl = '/district/getCounties.do?cityId=' + cityCode;
         } else {
-            var countyUrl = '/getCounties.do?cityId=0';
+            var countyUrl = '/district/getCounties.do?cityId=0';
         }
         masterAddrC(countyUrl, 'county');
         setTimeout(function () {
             var countyCode = $('#county').find('option').eq(0).attr('code');
             if (undefined != countyCode) {
-                var villageUrl = '/getVillages.do?countyId=' + countyCode;
+                var villageUrl = '/district/getVillages.do?countyId=' + countyCode;
             } else {
-                var villageUrl = '/getVillages.do?countyId=0';
+                var villageUrl = '/district/getVillages.do?countyId=0';
             }
             masterAddrC(villageUrl, 'village');
             setTimeout(function () {
@@ -83,17 +86,17 @@ $('#province').change(function () {
                 $('#county').attr('countyId', $('#county').find().eq(0).attr('code'));
                 $('#village').attr('villageId', $('#village').find().eq(0).attr('code'));
             }, 300)
-        }, 300);
-    }, 300);
+        }, 400);
+    }, 500);
 });
 
 $('#city').change(function () {
     var _this = $(this);
     var cityCode = _this.find('option:selected').attr('code');
     if (cityCode != undefined) {
-        var countyUrl = '/getCounties.do?cityId=' + cityCode;
+        var countyUrl = '/district/getCounties.do?cityId=' + cityCode;
     } else {
-        var countyUrl = '/getCounties.do?cityId=0';
+        var countyUrl = '/district/getCounties.do?cityId=0';
     }
 
     masterAddrC(countyUrl, 'county');
@@ -102,9 +105,9 @@ $('#city').change(function () {
 
 //            console.log("countyCode:" + countyCode);
         if (undefined != countyCode) {
-            var villageUrl = '/getVillages.do?countyId=' + countyCode;
+            var villageUrl = '/district/getVillages.do?countyId=' + countyCode;
         } else {
-            var villageUrl = '/getVillages.do?countyId=0';
+            var villageUrl = '/district/getVillages.do?countyId=0';
         }
         masterAddrC(villageUrl, 'village');
         setTimeout(function () {
@@ -112,7 +115,7 @@ $('#city').change(function () {
             $('#county').attr('countyId', $('#county').find().eq(0).attr('code'));
             $('#village').attr('villageId', $('#village').find().eq(0).attr('code'));
         }, 100)
-    }, 100);
+    }, 200);
 });
 
 $('#county').change(function () {
@@ -121,9 +124,9 @@ $('#county').change(function () {
 
 //        console.log("countyCode: " + countyCode);
     if (countyCode != undefined) {
-        var villageUrl = '/getVillages.do?countyId=' + countyCode;
+        var villageUrl = '/district/getVillages.do?countyId=' + countyCode;
     } else {
-        var villageUrl = '/getVillages.do?countyId=0';
+        var villageUrl = '/district/getVillages.do?countyId=0';
     }
     masterAddrC(villageUrl, 'village');
     setTimeout(function () {
@@ -146,6 +149,8 @@ function masterAddrC(url, select) {
         url: url,
         success: function (data) {
             $('#' + select).html('');
+            var $option = '<option>未选</option>';
+            $('#' + select).append($option);
             if (null != data.data) {
                 $.each(data.data, function (i, item) {
                     var $option = '<option code=' + item.id + ' value=' + item.name + '>' + item.name + '</option>';
@@ -155,7 +160,6 @@ function masterAddrC(url, select) {
         },
         error: function () {
             console.log("fail");
-            return;
         }
     });
 }

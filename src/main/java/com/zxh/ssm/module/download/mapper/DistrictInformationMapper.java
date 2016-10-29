@@ -1,6 +1,7 @@
 package com.zxh.ssm.module.download.mapper;
 
 import com.zxh.ssm.module.whole.pojo.FourLevelLinkage;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -10,9 +11,9 @@ import java.util.List;
 public interface DistrictInformationMapper {
     List<FourLevelLinkage> selectProvinces() throws Exception;
 
-    List<FourLevelLinkage> selectCities(int upId) throws Exception;
+    List<FourLevelLinkage> selectCities(@Param("upId") int upId) throws Exception;
 
-    List<FourLevelLinkage> selectCounties(int upId) throws Exception;
+    List<FourLevelLinkage> selectCounties(@Param("upId") int upId) throws Exception;
 
-    List<FourLevelLinkage> selectVillages(int upId) throws Exception;
+    List<FourLevelLinkage> selectVillages(@Param("upId") int upId) throws Exception;
 }

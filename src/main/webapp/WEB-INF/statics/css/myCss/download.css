@@ -1,0 +1,68 @@
+.field {
+    border: 1px solid rgba(74, 74, 74, 0.92);
+    border-radius: 5px;
+    width: 17%;
+    height: 10%;
+    position: relative;
+    margin: 10px;
+    padding: 5px;
+    float: left;
+    background-color: rgba(221, 223, 217, 0.81);
+}
+
+.container {
+    border: 2px double black;
+    border-radius: 5px;
+    box-shadow: 0px 10px 20px #3e495f;
+    width: 80%;
+    height: auto;
+    top: 5%;
+    padding: 10px;
+    margin: 0 10%;
+    position: absolute;
+    background-color: ghostwhite;
+}
+
+.addressContainer, .fieldContainer, .sexContainer, .timeContainer ,.submitContainer{
+    margin: 20px 0px;
+
+}
+
+#needAll, #needNon {
+    float: right;
+    margin: 0 5px;
+}
+
+#submitTerm {
+    float: right;
+    right: 20px;
+}
+
+.describe {
+    margin: 20px 0;
+    height: 30px;
+}
+
+.fieldName {
+    font-size: large;
+    font-weight: bold;
+    font-family: "Arial";
+}
+.sexField{
+    border: 1px solid rgba(74, 74, 74, 0.92);
+    border-radius: 5px;
+    width: 17%;
+    height: 10%;
+    margin: 10px;
+    padding: 5px;
+    background-color: rgba(221, 223, 217, 0.81);
+}
+.sexSpan{
+    margin: 0 10px;
+}
+#submitTerm{
+    float: right;
+}
+body{
+    background-color:whitesmoke;
+}

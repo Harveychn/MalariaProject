@@ -16,7 +16,7 @@ import java.util.Map;
  * Created by 郑晓辉 on 2016/10/16.
  */
 @Controller
-//@RequestMapping("/district")
+@RequestMapping("/district")
 public class DistinctController {
     @Resource
     private DistrictService districtService;

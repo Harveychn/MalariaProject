@@ -2,6 +2,7 @@
 <%@ include file="/WEB-INF/view/common/tagPage.jsp" %>
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <title>首页</title>
     <meta charset="utf-8">
@@ -9,11 +10,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <script src="${webRoot}/js/jquery.min.js?v=2.1.4"></script>
+    <script type="text/javascript" src="${webRoot}/js/jquery.min.js?v=2.1.4"></script>
 </head>
 <body>
+
 <div align="center">
-    <form action="/DownloadDBData/downloadExcel" method="post">
+    <h3>文件下载测试</h3>
+    <form action="/DownloadDBData/downloadExcel.do" method="post">
         <input type="submit"/>
     </form>
 </div>
@@ -35,8 +38,5 @@
     </select>
 </div>
 </body>
-<script src="${webRoot}/js/FourLevelLinkage.js"></script>
-<%--<script type="text/javascript">--%>
-    <%----%>
-<%--</script>--%>
+<script type="text/javascript" src="${webRoot}/js/FourLevelLinkage.js"></script>
 </html>

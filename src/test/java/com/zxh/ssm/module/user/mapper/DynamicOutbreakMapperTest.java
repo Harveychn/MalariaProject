@@ -30,8 +30,10 @@ public class DynamicOutbreakMapperTest {
         dynamicOutbreakVo.setMonth(1);
 //        List<DynamicOutbreakVo> result = dynamicOutbreakMapper.selectAddressByYearMonth(dynamicOutbreakVo);
         List<DynamicOutbreakRe> addresultList = dynamicOutbreakMapper.selectAddressByYearMonth(dynamicOutbreakVo);
-        System.out.println("  getAddress : "+addresultList.get(0).getAddress());
-        System.out.println(" getAddressCount() :"+addresultList.get(0).getAddressCount());
+        for (DynamicOutbreakRe d: addresultList
+             ) {
+            System.out.println(d.getAddress()+" : "+d.getAddressCount());
+        }
     }
 
 }
