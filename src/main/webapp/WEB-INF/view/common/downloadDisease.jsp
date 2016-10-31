@@ -90,6 +90,8 @@
 </div>
 </body>
 
+<!--Layer-->
+<script src="${webRoot}/js/plugins/layer/layer.js" type="text/javascript"></script>
 <script src="${webRoot}/js/myJs/downloadMalaria.js" type="text/javascript"></script>
 <script src="${webRoot}/js/FourLevelLinkage.js" type="text/javascript"></script>
 <%--<script src="${webRoot}/js/plugins/laydate/laydate.js" type="text/javascript"></script>--%>

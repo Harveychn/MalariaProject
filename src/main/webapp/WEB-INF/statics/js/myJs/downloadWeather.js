@@ -5,6 +5,9 @@ $('#needNon').on('click', function (event) {
     $('input#fields').iCheck('uncheck');
 });
 $('#submitTerm').on('click', function (event) {
+    var loading = layer.load(0, {
+        shade:[0.8,'white']
+    });
     //获取选择的时间
     // var beginYear = $('#start').val();
     var beginYear = $('#beginYear').val();
@@ -44,6 +47,7 @@ $('#submitTerm').on('click', function (event) {
         type: "post",
         traditional: true,
         success: function (data) {
+            layer.close(loading);
             console.log("OK :" + data);
             window.open("/DownloadDBData/downloadExcel", "_self");
         },

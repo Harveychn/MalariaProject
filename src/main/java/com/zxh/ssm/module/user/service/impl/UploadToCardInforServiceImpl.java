@@ -142,6 +142,9 @@ public class UploadToCardInforServiceImpl implements UploadToCardInforService {
         CardInformationKey cardInformationKey = new CardInformationKey();
         for (int i = 0; i < excelRows.size(); i++) {
             rowData = excelRows.get(i);
+            if (null == rowData.getYear() || null == rowData.getCardid()){
+                continue;
+            }
             cardInformationKey.setYear(rowData.getYear());
             cardInformationKey.setCardid(rowData.getCardid());
             if (cardInformationMapper.selectByPrimaryKey(cardInformationKey) != null) {

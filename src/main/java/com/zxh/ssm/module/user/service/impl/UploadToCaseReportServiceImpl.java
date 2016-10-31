@@ -179,6 +179,9 @@ public class UploadToCaseReportServiceImpl implements UploadToCaseReportService 
         CaseReportInformation rowData = null;
         for (int i = 0; i < excelRows.size(); i++) {
             rowData = excelRows.get(i);
+            if (null == rowData.getYear() || null == rowData.getCardid()){
+                continue;
+            }
             caseReportInformationKey.setYear(rowData.getYear());
             caseReportInformationKey.setCardid(rowData.getCardid());
             if (caseReportInformationMapper.selectByPrimaryKey(caseReportInformationKey) != null) {

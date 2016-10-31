@@ -159,6 +159,9 @@ public class UploadToCaseJudgServiceImpl implements UploadToCaseJudgService {
         CaseJudgmentInformationKey caseJudgmentInformationKey = new CaseJudgmentInformationKey();
         for (int i = 0; i < excelRows.size(); i++) {
             rowData = excelRows.get(i);
+            if (null == rowData.getYear() || null == rowData.getCardid()){
+                continue;
+            }
             caseJudgmentInformationKey.setYear(rowData.getYear());
             caseJudgmentInformationKey.setCardid(rowData.getCardid());
             if (caseJudgmentInformationMapper.selectByPrimaryKey(caseJudgmentInformationKey) != null) {
@@ -188,7 +191,7 @@ public class UploadToCaseJudgServiceImpl implements UploadToCaseJudgService {
         }
         int updateNum = 0;
         for (int i = 0; i < updateList.size(); i++) {
-            CaseJudgmentInformation current = new CaseJudgmentInformation();
+            CaseJudgmentInformation current = updateList.get(i);
             try {
                 if (caseJudgmentInformationMapper.updateByPrimaryKey(current) == 1) {
                     updateNum += 1;

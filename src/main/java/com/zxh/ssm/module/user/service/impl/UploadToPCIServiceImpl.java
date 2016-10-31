@@ -223,6 +223,9 @@ public class UploadToPCIServiceImpl implements UploadToPCIService {
         List<PatientCasesInformation> errorOperatingList = new ArrayList<>();
         for (int index = 0; index < excelDataList.size(); index++) {
             excelRowData = excelDataList.get(index);
+            if (null == excelRowData.getYear() || null == excelRowData.getCardid()) {
+                continue;
+            }
             patientCasesInformationKey.setYear(excelRowData.getYear());
             patientCasesInformationKey.setCardid(excelRowData.getCardid());
             if (patientCasesInformationMapper.selectByPrimaryKey(patientCasesInformationKey) != null) {

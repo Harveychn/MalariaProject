@@ -3,7 +3,11 @@
 <mapper namespace="com.zxh.ssm.module.preDeal.mapper.PreDealMapper">
 
     <select id="selectAddressArray" resultType="java.lang.String">
-      SELECT DISTINCT(address) FROM patient_information WHERE address LIKE '%云南%' LIMIT 6250,1000
+      SELECT DISTINCT(address) FROM patient_information
+      <where>
+        AND address NOT IN (SELECT address FROM address_geocode)
+      </where>
+        LIMIT 0,1000
     </select>
 
 </mapper>

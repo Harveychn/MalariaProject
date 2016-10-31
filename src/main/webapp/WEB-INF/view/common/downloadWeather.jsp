@@ -66,6 +66,8 @@
 </div>
 </body>
 
+<!--Layer-->
+<script src="${webRoot}/js/plugins/layer/layer.js" type="text/javascript"></script>
 <script src="${webRoot}/js/myJs/downloadWeather.js" type="text/javascript"></script>
 <%--<script src="${webRoot}/js/FourLevelLinkage.js" type="text/javascript"></script>--%>
 <script>

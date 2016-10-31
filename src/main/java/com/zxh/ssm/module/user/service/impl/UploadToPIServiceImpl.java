@@ -254,6 +254,9 @@ public class UploadToPIServiceImpl implements UploadToPIService {
         //数据遍历分类
         for (int i = 0; i < excelDataList.size(); i++) {
             excelRowData = excelDataList.get(i);
+            if (null == excelRowData.getYear() || null == excelRowData.getCardid()){
+                continue;
+            }
             patientInformationKey.setYear(excelRowData.getYear());
             patientInformationKey.setCardid(excelRowData.getCardid());
             if (patientInformationMapper.selectByPrimaryKey(patientInformationKey) != null) {

@@ -221,6 +221,9 @@ public class UploadToCaseRevisedServiceImpl implements UploadToCaseRevisedServic
         CaseRevisedInformation rowData = null;
         for (int i = 0; i < excelRows.size(); i++) {
             rowData = excelRows.get(i);
+            if (null == rowData.getYear() || null == rowData.getCardid()) {
+                continue;
+            }
             caseRevisedInformationKey.setYear(rowData.getYear());
             caseRevisedInformationKey.setCardid(rowData.getCardid());
             if (caseRevisedInformationMapper.selectByPrimaryKey(caseRevisedInformationKey) != null) {
@@ -250,7 +253,7 @@ public class UploadToCaseRevisedServiceImpl implements UploadToCaseRevisedServic
         }
         int updateNum = 0;
         for (int i = 0; i < updateList.size(); i++) {
-            CaseRevisedInformation current = new CaseRevisedInformation();
+            CaseRevisedInformation current = updateList.get(i);
             try {
                 if (caseRevisedInformationMapper.updateByPrimaryKey(current) == 1) {
                     updateNum += 1;

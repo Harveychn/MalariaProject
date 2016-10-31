@@ -6,8 +6,13 @@ import com.zxh.ssm.module.whole.pojo.*;
  * Created by 郑晓辉 on 2016/10/13.
  */
 public class UploadInform {
+    //当前操作文件名
+    private String fileName;
     private boolean isFileTypeError;
+    //非正常读取错误及信息
     private boolean isErrorOccur;
+    private String errorMessage;
+    //是否有改上传文件数据格式的模板
     private boolean isHasThisModule;
     private UploadDBMessage<ErrorCardInfor<String>, CardInformation> cardInform;
     private UploadDBMessage<ErrorPatientInformation<String>, PatientInformation> patientInform;
@@ -17,6 +22,22 @@ public class UploadInform {
     private UploadDBMessage<ErrorCaseJudgInfor<String>, CaseJudgmentInformation> caseJudgeInform;
     private UploadDBMessage<ErrorWeatherInfor<String>, WeatherData> weatherInform;
     private UploadDBMessage<ErrorObserStaInfor<String>, MeteorologicalStationInsformation> observeStaInform;
+
+    public String getErrorMessage() {
+        return errorMessage;
+    }
+
+    public void setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+    }
+
+    public String getFileName() {
+        return fileName;
+    }
+
+    public void setFileName(String fileName) {
+        this.fileName = fileName;
+    }
 
     public UploadDBMessage<ErrorCardInfor<String>, CardInformation> getCardInform() {
         return cardInform;

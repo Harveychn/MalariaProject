@@ -5,6 +5,9 @@ $('#needNon').on('click', function (event) {
     $('input#fields').iCheck('uncheck');
 });
 $('#submitTerm').on('click', function (event) {
+    var loading = layer.load(0, {
+        shade:[0.8,'white']
+    });
     //获取选择的年龄
     var minAge = $('#minAge').val();
     var maxAge = $('#maxAge').val();
@@ -58,6 +61,7 @@ $('#submitTerm').on('click', function (event) {
         traditional: true,
         success: function (data) {
             // console.log("OK :" + data);
+            layer.close(loading);
             window.open("/DownloadDBData/downloadExcel.do", "_self");
         },
         error: function () {

@@ -290,6 +290,9 @@ public class UploadToWeatherServiceImpl implements UploadToWeatherService {
         WeatherDataKey weatherDataKey = new WeatherDataKey();
         for (int i = 0; i < excelRows.size(); i++) {
             rowData = excelRows.get(i);
+            if (null == rowData.getDistrictstationnum() || null == rowData.getWeatheryear() || null == rowData.getWeathermonth() || null == rowData.getWeatherday()) {
+                continue;
+            }
             weatherDataKey.setDistrictstationnum(rowData.getDistrictstationnum());
             weatherDataKey.setWeatheryear(rowData.getWeatheryear());
             weatherDataKey.setWeathermonth(rowData.getWeathermonth());

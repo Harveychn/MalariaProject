@@ -58,7 +58,7 @@ public class UploadToObserStaServiceImpl implements UploadToObserStaService{
                         HSSFCell startMonth = hssfRow.getCell(7);
                         HSSFCell endYear = hssfRow.getCell(8);
                         HSSFCell endMonth = hssfRow.getCell(9);
-                        HSSFCell lackMeasurement = hssfRow.getCell(0);
+                        HSSFCell lackMeasurement = hssfRow.getCell(10);
                         try {
                             if (!excelValue.getValue(districtStationNum).equals(".")) {
                                 meteorologicalStationInsformation.setDistrictstationnum(Integer.parseInt(excelValue.getValue(districtStationNum)));
@@ -204,6 +204,9 @@ public class UploadToObserStaServiceImpl implements UploadToObserStaService{
         MeteorologicalStationInsformation rowData = null;
         for (int i = 0; i < excelRows.size(); i++) {
             rowData = excelRows.get(i);
+            if (null == rowData.getDistrictstationnum()){
+                continue;
+            }
             int key = rowData.getDistrictstationnum();
             if (meteorologicalStationInsformationMapper.selectByPrimaryKey(key) != null) {
                 updateList.add(rowData);
