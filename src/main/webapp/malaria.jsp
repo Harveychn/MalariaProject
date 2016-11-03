@@ -107,16 +107,9 @@
                 </li>
 
                 <li>
-                    <a class="J_menuItem" href="/unDone.jsp">
-                        <i class="fa fa fa-calculator"></i>
-                        <span class="nav-label">执行计算</span>
-                    </a>
-                </li>
-
-                <li>
                     <a href="#">
                         <i class="fa fa fa-fire"></i>
-                        <span class="nav-label">爆发与分析</span>
+                        <span class="nav-label">爆发分析</span>
                         <span class="fa arrow"></span>
                     </a>
                     <ul class="nav nav-second-level">
@@ -150,6 +143,13 @@
                             <a href="/unDone.jsp" class="J_menuItem">6</a>
                         </li>
                     </ul>
+                </li>
+
+                <li>
+                    <a class="J_menuItem" href="/unDone.jsp">
+                        <i class="fa fa fa-calculator"></i>
+                        <span class="nav-label">执行计算</span>
+                    </a>
                 </li>
 
                 <li>
