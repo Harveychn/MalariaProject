@@ -16,7 +16,7 @@
     <link href="${webRoot}/css/animate.css" rel="stylesheet" type="text/css"/>
     <style>
         body {
-            background: url("${webRoot}/images/backImage.jpeg") repeat;
+            background-color: #cfd1d5;
         }
     </style>
     <script src="${webRoot}/js/jquery.min.js" type="text/javascript"></script>
@@ -25,13 +25,13 @@
 <body>
 <div class="container">
     <div id="rowContainer" align="center">
-        <div id="diseaseDiv" class="myCol1" onclick="handleClick1();">
+        <div id="diseaseDiv" class="myCol1 animated flipInY" onclick="handleClick1();">
             <div id="disease" class="message">疟疾数据</div>
         </div>
-        <div id="weatherDiv" class="myCol2" onclick="handleClick2();">
+        <div id="weatherDiv" class="myCol2 animated flipInY" onclick="handleClick2();">
             <div id="weather" class="message">气候数据</div>
         </div>
-        <div id="stationDiv" class="myCol3" onclick="handleClick3();">
+        <div id="stationDiv" class="myCol3 animated flipInY" onclick="handleClick3();">
             <div id="station" class="message">观测站数据</div>
         </div>
     </div>

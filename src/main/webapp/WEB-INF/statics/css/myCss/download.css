@@ -1,13 +1,18 @@
 .field {
     border: 1px solid rgba(74, 74, 74, 0.92);
     border-radius: 5px;
-    width: 17%;
+    width: 22%;
     height: 10%;
     position: relative;
     margin: 10px;
     padding: 5px;
     float: left;
     background-color: rgba(221, 223, 217, 0.81);
+}
+
+.field > label {
+    font-weight: 400;
+    font-family: Arial;
 }
 
 .container {
@@ -23,14 +28,17 @@
     background-color: ghostwhite;
 }
 
-.addressContainer, .fieldContainer, .sexContainer, .timeContainer ,.submitContainer{
+.addressContainer, .fieldContainer, .sexContainer, .timeContainer, .submitContainer, .ageContainer {
     margin: 20px 0px;
-
+    top: 20px;
+    position: relative;
+    height: auto;
+    width: 100%;
 }
 
 #needAll, #needNon {
     float: right;
-    margin: 0 5px;
+    margin: 5px 5px;
 }
 
 #submitTerm {
@@ -44,25 +52,32 @@
 }
 
 .fieldName {
+    font-family: "Microsoft YaHei UI Light";
     font-size: large;
-    font-weight: bold;
-    font-family: "Arial";
+    font-weight: 500;
 }
-.sexField{
+
+.sexField {
     border: 1px solid rgba(74, 74, 74, 0.92);
     border-radius: 5px;
     width: 17%;
-    height: 10%;
+    height: auto;
     margin: 10px;
     padding: 5px;
     background-color: rgba(221, 223, 217, 0.81);
 }
-.sexSpan{
+
+.sexSpan {
     margin: 0 10px;
+    font-family: arial;
+    font-weight: 400;
 }
-#submitTerm{
+
+#submitTerm {
     float: right;
 }
-body{
-    background-color:whitesmoke;
+
+body {
+    background-color: whitesmoke;
 }
+

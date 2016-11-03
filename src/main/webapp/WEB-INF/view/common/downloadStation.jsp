@@ -14,7 +14,17 @@
     <script src="${webRoot}/js/jquery.min.js" type="text/javascript"></script>
     <link href="${webRoot}/css/plugins/iCheck/flat/blue.css" rel="stylesheet"/>
     <script src="${webRoot}/js/plugins/iCheck/icheck.min.js"></script>
+    <link href="${webRoot}/css/style.css" rel="stylesheet"/>
+    <link href="${webRoot}/css/bootstrap.min.css" rel="stylesheet"/>
     <link href="${webRoot}/css/myCss/download.css" rel="stylesheet"/>
+    <style>
+        .partDivide {
+            width: 100%;
+            height: auto;
+            float: left;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
 
@@ -22,46 +32,27 @@
 <div class="container">
     <div align="center">
         <h2>观测站数据下载</h2>
-        <hr>
     </div>
-    <div class="submitContainer">
-        <button id="submitTerm" class="btn-primary" type="submit">开始下载</button>
+    <div class="partDivide">
+        <button id="submitTerm" class="btn btn-primary pull-right" type="submit">开始下载</button>
     </div>
-    <%--<div class="addressContainer">--%>
-    <%--<span class="fieldName">选择数据地区：</span>--%>
-    <%--<select id='province'>--%>
-    <%--<option>未选</option>--%>
-    <%--</select>--%>
-    <%--<select id='city'>--%>
-    <%--<option>未选</option>--%>
-    <%--</select>--%>
-    <%--<select id='county'>--%>
-    <%--<option>未选</option>--%>
-    <%--</select>--%>
-    <%--<select id="village">--%>
-    <%--<option>未选</option>--%>
-    <%--</select>--%>
-    <%--</div>--%>
-    <%--<div class="timeContainer">--%>
-        <%--<span class="fieldName">选择时间区间：</span>--%>
-        <%--<input id="beginYear" type="number" class="form-control" min="1900" max="2099" placeholder="数据开始年份"/>--%>
-        <%--<input id="endYear" type="number" class="form-control" min="1900" max="2099" placeholder="数据结束年份"/>--%>
-    <%--</div>--%>
     <hr>
-    <div class="fieldContainer">
-        <div class="describe">
-            <div>
-                <span class="fieldName">请选择将要下载的字段：</span>
-                <button class="button" id="needNon">全不选</button>
-                <button class="button" id="needAll">全选</button>
+    <div class="partDivide">
+        <div class="fieldContainer">
+            <div class="describe">
+                <div>
+                    <span class="fieldName">请选择将要下载的字段：</span>
+                    <button class="btn btn-default" id="needNon">全不选</button>
+                    <button class="btn btn-default" id="needAll">全选</button>
+                </div>
             </div>
+            <c:forEach items="${categoryFieldsRes}" var="item">
+                <label class="field">
+                    <input type="checkbox" id="fields" name="selectedFields" value="${item.displayName}"/>
+                    <label>${item.displayName}</label>
+                </label>
+            </c:forEach>
         </div>
-        <c:forEach items="${categoryFieldsRes}" var="item">
-            <label class="field">
-                <input type="checkbox" id="fields" name="selectedFields" value="${item.displayName}"/>
-                <label>${item.displayName}</label>
-            </label>
-        </c:forEach>
     </div>
 </div>
 </body>
