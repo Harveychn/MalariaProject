@@ -4,7 +4,6 @@ import com.zxh.ssm.module.user.pojo.*;
 import com.zxh.ssm.module.user.service.*;
 import com.zxh.ssm.module.whole.pojo.*;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -192,7 +191,7 @@ public class UploadFileController {
                 continue;
             }
             SimpleDateFormat folderSdf = new SimpleDateFormat("yyyy-MM-dd");
-            String folderPath = "E:/创新实践/uploadFiles/excels" + "/" + folderSdf.format(new Date());
+            String folderPath = "I:/malariaFiles/uploadFiles/excels" + "/" + folderSdf.format(new Date());
             File fileFolder = new File(folderPath);
 
             SimpleDateFormat fileSdf = new SimpleDateFormat("yyyyMMddhhmmss");

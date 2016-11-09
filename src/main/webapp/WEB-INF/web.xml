@@ -10,7 +10,8 @@
         <!--<welcome-file>test.jsp</welcome-file>-->
         <!--<welcome-file>geoCoding.jsp</welcome-file>-->
         <!--<welcome-file>dataDownload.jsp</welcome-file>-->
-        <welcome-file>malaria.jsp</welcome-file>
+        <!--<welcome-file>malaria.jsp</welcome-file>-->
+        <welcome-file>login.jsp</welcome-file>
     </welcome-file-list>
 
 

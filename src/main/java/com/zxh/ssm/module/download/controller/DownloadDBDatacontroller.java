@@ -198,7 +198,13 @@ public class DownloadDBDataController {
         System.out.println("执行了weatherParam.do");
         return 1;
     }
-
+    /**
+     * 观测站数据下载
+     *
+     * @param requests
+     * @return
+     * @throws Exception
+     */
     @RequestMapping("/stationParams")
     public
     @ResponseBody

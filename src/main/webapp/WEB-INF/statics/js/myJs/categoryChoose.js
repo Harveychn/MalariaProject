@@ -22,6 +22,20 @@ function handleClick3() {
     window.open(url, "_self");
     // window.open(url);
 }
-
+function downloadone() {
+    var url = "/DownloadExcelDemo/diseaseDemo.do";
+    window.open(url, "_self");
+    // window.open(url);
+}
+function downloadtwo() {
+    var url = "/DownloadExcelDemo/weatherDemo.do";
+    window.open(url, "_self");
+    // window.open(url);
+}
+function downloadthree() {
+    var url = "/DownloadExcelDemo/stationDemo.do";
+    window.open(url, "_self");
+    // window.open(url);
+}
 
 

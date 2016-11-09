@@ -9,7 +9,7 @@
     <!--中文：http://www.mybatis.tk/-->
     <!--中文：http://mbg.cndocs.tk/-->
     <!--添加你本地的驱动jar-->
-    <classPathEntry location="C:\Users\郑晓辉\.m2\repository\mysql\mysql-connector-java\5.1.21\mysql-connector-java-5.1.21.jar"/>
+    <classPathEntry location="C:\Users\R丶sJournal\.m2\repository\mysql\mysql-connector-java\5.1.21\mysql-connector-java-5.1.21.jar"/>
     
     <context id="context" targetRuntime="MyBatis3">
 
@@ -22,7 +22,7 @@
         </commentGenerator>
 
         <!--添加你的 JDBC 连接信息-->
-        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/malariaproj" userId="root" password="zxh980278090"/>
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/malariaproj" userId="root" password="root"/>
 
         <javaTypeResolver>
             <property name="forceBigDecimals" value="false"/>

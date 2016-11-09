@@ -24,6 +24,12 @@
     <link href="${webRoot}/css/plugins/dropzone/basic.css" rel="stylesheet">
     <link href="${webRoot}/css/plugins/dropzone/dropzone.css" rel="stylesheet">
     <link href="${webRoot}/css/style.css?v=4.1.0" rel="stylesheet">
+
+    <script src="${webRoot}/js/jquery.min.js" type="text/javascript"></script>
+    <link href="${webRoot}/css/plugins/iCheck/flat/blue.css" rel="stylesheet"/>
+    <script src="${webRoot}/js/plugins/iCheck/icheck.min.js"></script>
+    <link href="${webRoot}/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="${webRoot}/css/myCss/download.css" rel="stylesheet"/>
     <style>
         #message {
             font-family: "Microsoft YaHei UI";
@@ -40,6 +46,7 @@
             width: 428px;
         }
     </style>
+    <link href="${webRoot}/css/myCss/categoryChoose.css" rel="stylesheet" type="text/css"/>
 </head>
 
 <body class="gray-bg">
@@ -61,7 +68,7 @@
                         <button type="submit" class="btn btn-primary pull-right">提交</button>
                         <div class="dz-message" id="message">
                             拖拽文件至此<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             或点击选择文件
                         </div>
                     </form>
@@ -69,7 +76,12 @@
             </div>
         </div>
     </div>
+</div>
 
+<div class="partDivide">
+    <button id="submitDisease" class="btn btn-primary" type="submit" onclick="downloadone()">下载疟疾数据模板</button>
+    <button id="submitWeather" class="btn btn-primary" type="submit"onclick="downloadtwo()">下载气候数据模板</button>
+    <button id="submitStaion" class="btn btn-primary" type="submit" onclick="downloadthree()">下载观测站数据模板</button>
 </div>
 
 <!-- 全局js -->
