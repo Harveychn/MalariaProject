@@ -35,13 +35,13 @@
     </style>
 </head>
 <body>
-<div id="container"></div>
+<div id="container" ></div>
 </body>
 <script type="text/javascript">
     // 百度地图API功能
     var map = new BMap.Map("container");
     var point = new BMap.Point(116.331398, 39.897445);
-    map.centerAndZoom(point, 12);
+    map.centerAndZoom(point, 10);
 
     function myFun(result) {
         var cityName = result.name;
