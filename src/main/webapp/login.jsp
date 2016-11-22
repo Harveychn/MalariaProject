@@ -7,11 +7,11 @@
     <title>登录</title>
     <meta name="keywords" content="后台">
     <meta name="description" content="后台">
-    <link href="WEB-INF/statics/css/bootstrap.min.css" rel="stylesheet">
-    <link href="WEB-INF/statics/css/font-awesome.min.css" rel="stylesheet">
-    <link href="WEB-INF/statics/css/animate.css" rel="stylesheet">
-    <link href="WEB-INF/statics/css/style.css" rel="stylesheet">
-    <link href="WEB-INF/statics/css/plugins/login/login.css" rel="stylesheet">
+    <link href="${webRoot}/css/bootstrap.min.css" rel="stylesheet">
+    <link href="${webRoot}/css/font-awesome.min.css" rel="stylesheet">
+    <link href="${webRoot}/css/animate.css" rel="stylesheet">
+    <link href="${webRoot}/css/style.css" rel="stylesheet">
+    <link href="${webRoot}/css/plugins/login/login.css" rel="stylesheet">
     <!--[if lt IE 9]>
     <meta http-equiv="refresh" content="0;ie.html" />
     <![endif]-->
@@ -53,11 +53,11 @@
                 <form method="post" action="/user/login">
                     <h4 class="no-margins">登录：</h4>
                     <p class="m-t-md">登录到时空的疟疾数据监控系统</p>
-                    <input type="text" class="form-control uname" placeholder="用户名" />
-                    <input type="password" class="form-control pword m-b" placeholder="密码" />
+                    <input type="text" name="useremail" class="form-control uname" placeholder="邮箱" />
+                    <input type="password" name="userpassword" class="form-control pword m-b" placeholder="密码" />
                     <strong><a href="">忘记密码&nbsp;&nbsp;&nbsp;</a></strong>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>还没有账号？ <a href="register.html">立即注册&raquo;</a></strong>
-                    <a> <input type="submit"class="btn btn-success btn-block" value="登陆" id="login"/></a>
+                    <a> <input type="submit" name="submit" class="btn btn-success btn-block" value="登陆" id="login"/></a>
                 </form>
             </div>
         </div>
