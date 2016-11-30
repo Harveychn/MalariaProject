@@ -93,6 +93,13 @@
             <ul class="nav" id="side-menu">
 
                 <li>
+                    <a class="J_menuItem" href="/checkUser.jsp">
+                        <i class="fa fa-check-square"></i>
+                        <span class="nav-label">审核页面</span>
+                    </a>
+                </li>
+
+                <li>
                     <a class="J_menuItem" href="/dataUpload.jsp">
                         <i class="fa fa-cloud-upload"></i>
                         <span class="nav-label">数据导入</span>
@@ -191,7 +198,7 @@
                     </li>
                 </ul>
             </div>
-            <a href="../login.jsp" class="roll-nav roll-right J_tabExit"><i class="fa fa fa-sign-out"></i> 退出</a>
+            <a href="../malaria.jsp" class="roll-nav roll-right J_tabExit"><i class="fa fa fa-sign-out"></i> 退出</a>
         </div>
         <div class="row J_mainContent" id="content-main">
             <iframe class="J_iframe" name="iframe0" width="100%" height="100%" src="user/index.jsp" frameborder="0"

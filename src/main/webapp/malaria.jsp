@@ -93,20 +93,6 @@
             <ul class="nav" id="side-menu">
 
                 <li>
-                    <a class="J_menuItem" href="/dataUpload.jsp">
-                        <i class="fa fa-cloud-upload"></i>
-                        <span class="nav-label">数据导入</span>
-                    </a>
-                </li>
-
-                <li>
-                    <a class="J_menuItem" href="/dataDownload.jsp">
-                        <i class="fa fa-download"></i>
-                        <span class="nav-label">数据下载</span>
-                    </a>
-                </li>
-
-                <li>
                     <a class="J_menuItem" href="/undone.jsp">
                         <i class="fa fa fa-calculator"></i>
                         <span class="nav-label">执行计算</span>
@@ -191,7 +177,7 @@
                     </li>
                 </ul>
             </div>
-            <a href="login.html" class="roll-nav roll-right J_tabExit"><i class="fa fa fa-sign-out"></i> 退出</a>
+            <a href="./login.jsp" class="roll-nav roll-right J_tabExit"><i class="fa fa fa-sign-out"></i> 登录</a>
         </div>
         <div class="row J_mainContent" id="content-main">
             <iframe class="J_iframe" name="iframe0" width="100%" height="100%" src="index.jsp" frameborder="0"

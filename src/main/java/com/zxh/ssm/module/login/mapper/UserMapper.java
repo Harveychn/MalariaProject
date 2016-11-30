@@ -1,11 +1,10 @@
 package com.zxh.ssm.module.login.mapper;
 
+import java.util.List;
 
 import com.zxh.ssm.module.login.pojo.User;
 import com.zxh.ssm.module.login.pojo.UserExample;
 import org.apache.ibatis.annotations.Param;
-
-import java.util.List;
 
 public interface UserMapper {
     /**

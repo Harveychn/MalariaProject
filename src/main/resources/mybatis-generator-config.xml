@@ -34,12 +34,12 @@
             <property name="trimStrings" value="true"/>
         </javaModelGenerator>
 
-        <!--要生成的 Mapper.xml 文件位置-->
+        <!--要生成的 mapper.xml 文件位置-->
         <sqlMapGenerator targetPackage="com.generator.mapper" targetProject="THIS_CONFIGURATION_IS_NOT_REQUIRED">
             <property name="enableSubPackages" value="false"/>
         </sqlMapGenerator>
 
-        <!--要生成的 Mapper 接口类-->
+        <!--要生成的 mapper 接口类-->
         <javaClientGenerator targetPackage="com.generator.mapper" targetProject="THIS_CONFIGURATION_IS_NOT_REQUIRED" type="XMLMAPPER">
             <property name="enableSubPackages" value="false"/>
         </javaClientGenerator>

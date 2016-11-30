@@ -56,7 +56,7 @@
                     <input type="text" name="useremail" class="form-control uname" placeholder="邮箱" />
                     <input type="password" name="userpassword" class="form-control pword m-b" placeholder="密码" />
                     <strong><a href="">忘记密码&nbsp;&nbsp;&nbsp;</a></strong>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>还没有账号？ <a href="register.html">立即注册&raquo;</a></strong>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>还没有账号？ <a href="register.jsp">立即注册&raquo;</a></strong>
                     <a> <input type="submit" name="submit" class="btn btn-success btn-block" value="登陆" id="login"/></a>
                 </form>
             </div>

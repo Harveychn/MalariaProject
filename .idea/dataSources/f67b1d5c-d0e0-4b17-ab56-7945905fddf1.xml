@@ -1,0 +1,2161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="MySQL - @localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="2.6">
+    <schema id="1" name="chronic">
+      <visible>1</visible>
+    </schema>
+    <schema id="2" name="information_schema"/>
+    <schema id="3" name="malaria"/>
+    <schema id="4" name="malariaproj">
+      <visible>1</visible>
+    </schema>
+    <schema id="5" name="mysql"/>
+    <schema id="6" name="performance_schema"/>
+    <schema id="7" name="ssm"/>
+    <schema id="8" name="toronto"/>
+    <table id="9" parent="1" name="cencus_age_group_population"/>
+    <table id="10" parent="1" name="census_dwelling"/>
+    <table id="11" parent="1" name="census_educational_attainment"/>
+    <table id="12" parent="1" name="census_immigrants_age"/>
+    <table id="13" parent="1" name="census_immigrants_mobility"/>
+    <table id="14" parent="1" name="census_immigrants_period"/>
+    <table id="15" parent="1" name="census_income"/>
+    <table id="16" parent="1" name="census_marital_status"/>
+    <table id="17" parent="1" name="census_tract"/>
+    <table id="18" parent="1" name="indicator"/>
+    <table id="19" parent="1" name="neighborhood"/>
+    <table id="20" parent="1" name="neighborhood_categorypopulation"/>
+    <table id="21" parent="1" name="neighborhood_cdipsda"/>
+    <table id="22" parent="1" name="neighborhood_commuting"/>
+    <table id="23" parent="1" name="neighborhood_diabetes_prevalence"/>
+    <table id="24" parent="1" name="neighborhood_eduattainment"/>
+    <table id="25" parent="1" name="neighborhood_family_health_care_providers"/>
+    <table id="26" parent="1" name="neighborhood_health"/>
+    <table id="27" parent="1" name="neighborhood_housing"/>
+    <table id="28" parent="1" name="neighborhood_income"/>
+    <table id="29" parent="1" name="neighborhood_labourforce"/>
+    <table id="30" parent="1" name="neighborhood_lead_in_dw"/>
+    <table id="31" parent="1" name="neighborhood_minority"/>
+    <table id="32" parent="1" name="neighborhood_mobility"/>
+    <table id="33" parent="1" name="neighborhood_mrfei"/>
+    <table id="34" parent="1" name="neighborhood_obesity"/>
+    <table id="35" parent="1" name="neighborhood_safety"/>
+    <table id="36" parent="1" name="neighborhood_shortestdistance2waterplants"/>
+    <table id="37" parent="1" name="neighborhood_tenant"/>
+    <table id="38" parent="1" name="user"/>
+    <table id="39" parent="4" name="address_geocode"/>
+    <table id="40" parent="4" name="card_information"/>
+    <table id="41" parent="4" name="case_judgment_information"/>
+    <table id="42" parent="4" name="case_report_information"/>
+    <table id="43" parent="4" name="case_revised_information"/>
+    <table id="44" parent="4" name="check_user"/>
+    <table id="45" parent="4" name="disease_outbreak"/>
+    <table id="46" parent="4" name="four_level_linkage">
+      <comment>中国省市区乡镇数据表</comment>
+    </table>
+    <table id="47" parent="4" name="indicator"/>
+    <table id="48" parent="4" name="meteorological_station_insformation"/>
+    <table id="49" parent="4" name="patient_cases_information"/>
+    <table id="50" parent="4" name="patient_information"/>
+    <table id="51" parent="4" name="standard_position">
+      <comment>省市县镇村数据</comment>
+    </table>
+    <table id="52" parent="4" name="user"/>
+    <table id="53" parent="4" name="weather_data"/>
+    <column id="54" parent="9" name="CT_id">
+      <mandatory>1</mandatory>
+      <data-type>float(7,2)|0</data-type>
+    </column>
+    <column id="55" parent="9" name="CT_year">
+      <mandatory>1</mandatory>
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="56" parent="9" name="B_TlPop">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="57" parent="9" name="B_Age0_4Pop">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="58" parent="9" name="B_Age5_9Pop">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="59" parent="9" name="B_Age10_14Pop">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="60" parent="9" name="B_Age15_19Pop">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="61" parent="9" name="B_Age15Pop">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="62" parent="9" name="B_Age16Pop">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="63" parent="9" name="B_Age17Pop">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="64" parent="9" name="B_Age18Pop">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="65" parent="9" name="B_Age19Pop">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="66" parent="9" name="B_Age20_24Pop">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="67" parent="9" name="B_Age25_29Pop">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="68" parent="9" name="B_Age30_34Pop">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="69" parent="9" name="B_Age35_39Pop">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="70" parent="9" name="B_Age40_44Pop">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="71" parent="9" name="B_Age45_49Pop">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="72" parent="9" name="B_Age50_54Pop">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="73" parent="9" name="B_Age55_59Pop">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="74" parent="9" name="B_Age60_64Pop">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="75" parent="9" name="B_Age65_69Pop">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="76" parent="9" name="B_Age70_74Pop">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="77" parent="9" name="B_Age75_79Pop">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="78" parent="9" name="B_Age80_84Pop">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="79" parent="9" name="B_AgeOver85Pop">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="80" parent="9" name="MedianAgePop">
+      <data-type>float(4,1)|0</data-type>
+    </column>
+    <column id="81" parent="9" name="AgeOver15Rate">
+      <data-type>float(4,1)|0</data-type>
+    </column>
+    <column id="82" parent="9" name="M_TlPop">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="83" parent="9" name="M_Age0_4Pop">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="84" parent="9" name="M_Age5_9Pop">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="85" parent="9" name="M_Age10_14Pop">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="86" parent="9" name="M_Age15_19Pop">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="87" parent="9" name="M_Age20_24Pop">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="88" parent="9" name="M_Age25_29Pop">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="89" parent="9" name="M_Age30_34Pop">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="90" parent="9" name="M_Age35_39Pop">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="91" parent="9" name="M_Age40_44Pop">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="92" parent="9" name="M_Age45_49Pop">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="93" parent="9" name="M_Age50_54Pop">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="94" parent="9" name="M_Age55_59Pop">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="95" parent="9" name="M_Age60_64Pop">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="96" parent="9" name="M_Age65_69Pop">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="97" parent="9" name="M_Age70_74Pop">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="98" parent="9" name="M_Age75_79Pop">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="99" parent="9" name="M_Age80_84Pop">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="100" parent="9" name="M_AgeOver85Pop">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="101" parent="9" name="F_TlPop">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="102" parent="9" name="F_Age0_4Pop">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="103" parent="9" name="F_Age5_9Pop">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="104" parent="9" name="F_Age10_14Pop">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="105" parent="9" name="F_Age15_19Pop">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="106" parent="9" name="F_Age20_24Pop">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="107" parent="9" name="F_Age25_29Pop">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="108" parent="9" name="F_Age30_34Pop">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="109" parent="9" name="F_Age35_39Pop">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="110" parent="9" name="F_Age40_44Pop">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="111" parent="9" name="F_Age45_49Pop">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="112" parent="9" name="F_Age50_54Pop">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="113" parent="9" name="F_Age55_59Pop">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="114" parent="9" name="F_Age60_64Pop">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="115" parent="9" name="F_Age65_69Pop">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="116" parent="9" name="F_Age70_74Pop">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="117" parent="9" name="F_Age75_79Pop">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="118" parent="9" name="F_Age80_84Pop">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="119" parent="9" name="F_AgeOver85Pop">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <key id="120" parent="9" name="PRIMARY">
+      <columns>CT_id
+CT_year</columns>
+      <primary>1</primary>
+    </key>
+    <column id="121" parent="10" name="CT_id">
+      <mandatory>1</mandatory>
+      <data-type>float(7,2)|0</data-type>
+    </column>
+    <column id="122" parent="10" name="CT_year">
+      <mandatory>1</mandatory>
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="123" parent="10" name="TlOccupiedDellNum">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="124" parent="10" name="Single_detachedNum">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="125" parent="10" name="ApartWith5plusStoreysNum">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="126" parent="10" name="MovableDwellingNum">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="127" parent="10" name="OtherDwellingNum">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="128" parent="10" name="Semi_detachedNum">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="129" parent="10" name="RowHouseNum">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="130" parent="10" name="Apart_DuplexNum">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="131" parent="10" name="ApartWith5lessStoreysNum">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="132" parent="10" name="OtherSingle_AttachedNum">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <key id="133" parent="10" name="PRIMARY">
+      <columns>CT_id
+CT_year</columns>
+      <primary>1</primary>
+    </key>
+    <column id="134" parent="11" name="CT_id">
+      <mandatory>1</mandatory>
+      <data-type>float(7,2)|0</data-type>
+    </column>
+    <column id="135" parent="11" name="CT_year">
+      <mandatory>1</mandatory>
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="136" parent="11" name="TlAgeOver15Educated_Pop">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="137" parent="11" name="NotEduAgeOver15Exp">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="138" parent="11" name="Highsch_DipOrEqulA15">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="139" parent="11" name="Postsec_CerDipDegA15">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="140" parent="11" name="ApprenTrade_CerDipA15">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="141" parent="11" name="CollCEGEPNonUni_CerDipA15">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="142" parent="11" name="Uni_Cer_BelowBachelorA15">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="143" parent="11" name="Uni_CerDipDeg_BachelorA15">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="144" parent="11" name="Bachelor_DegA15">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="145" parent="11" name="Uni_CerDipDeg_AboBachelorA15">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="146" parent="11" name="TlAge25_64Educated_Pop">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="147" parent="11" name="NotEduAge25_64Exp">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="148" parent="11" name="Highsch_DipOrEqulA25_64">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="149" parent="11" name="Postsec_CerDipDegA25_64">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="150" parent="11" name="ApprenTrade_CerDipA25_64">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="151" parent="11" name="CollCEGEPNonUni_CerDipA25_64">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="152" parent="11" name="Uni_Cer_BelowBachelorA25_64">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="153" parent="11" name="Uni_CerDipDeg_BachelorA25_64">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="154" parent="11" name="Bachelor_DegA25_64">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="155" parent="11" name="Uni_CerDipDeg_AboBachelorA25_64">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <key id="156" parent="11" name="PRIMARY">
+      <columns>CT_id
+CT_year</columns>
+      <primary>1</primary>
+    </key>
+    <column id="157" parent="12" name="CT_id">
+      <mandatory>1</mandatory>
+      <data-type>float(7,2)|0</data-type>
+    </column>
+    <column id="158" parent="12" name="CT_year">
+      <mandatory>1</mandatory>
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="159" parent="12" name="TlPop_TimeImmi">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="160" parent="12" name="Under5YImiPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="161" parent="12" name="5_14YImiPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="162" parent="12" name="15_24YImiPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="163" parent="12" name="25_44YImiPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="164" parent="12" name="Over45ImiPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <key id="165" parent="12" name="PRIMARY">
+      <columns>CT_id
+CT_year</columns>
+      <primary>1</primary>
+    </key>
+    <column id="166" parent="13" name="CT_id">
+      <mandatory>1</mandatory>
+      <data-type>float(7,2)|0</data-type>
+    </column>
+    <column id="167" parent="13" name="CT_year">
+      <mandatory>1</mandatory>
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="168" parent="13" name="TlPop_5YMobi">
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="169" parent="13" name="Non_5YmoversPop">
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="170" parent="13" name="Movers5YPop">
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="171" parent="13" name="Non_migrants5YPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="172" parent="13" name="Migrants5YPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="173" parent="13" name="Inter_migrants5YPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="174" parent="13" name="Intra_migrants5YPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="175" parent="13" name="Interpro_migrants5YPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="176" parent="13" name="Exter_migrants5YPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="177" parent="13" name="TlPop_1YMobi">
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="178" parent="13" name="Non_1YmoversPop">
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="179" parent="13" name="Movers1YPop">
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="180" parent="13" name="Non_migrants1YPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="181" parent="13" name="Migrants1YPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="182" parent="13" name="Inter_migrants1YPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="183" parent="13" name="Intra_migrants1YPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="184" parent="13" name="Interpro_migrants1YPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="185" parent="13" name="Exter_migrants1YPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <key id="186" parent="13" name="PRIMARY">
+      <columns>CT_id
+CT_year</columns>
+      <primary>1</primary>
+    </key>
+    <column id="187" parent="14" name="CT_id">
+      <mandatory>1</mandatory>
+      <data-type>float(7,2)|0</data-type>
+    </column>
+    <column id="188" parent="14" name="CT_year">
+      <mandatory>1</mandatory>
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="189" parent="14" name="TlPop_PeriodImmi">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="190" parent="14" name="Non_ImmigrantsPop_Period">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="191" parent="14" name="ImmigrantsPop_Period">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="192" parent="14" name="Before1961Pop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="193" parent="14" name="1961_1970Pop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="194" parent="14" name="Before1971Pop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="195" parent="14" name="1971_1980Pop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="196" parent="14" name="1981_1990Pop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="197" parent="14" name="1991_1995Pop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="198" parent="14" name="1996_2000Pop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="199" parent="14" name="1991_2000Pop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="200" parent="14" name="2001_2006Pop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="201" parent="14" name="2001_2011Pop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="202" parent="14" name="2001_2005Pop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="203" parent="14" name="2006_2011Pop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="204" parent="14" name="Non_permanentRePop_Period">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <key id="205" parent="14" name="PRIMARY">
+      <columns>CT_id
+CT_year</columns>
+      <primary>1</primary>
+    </key>
+    <column id="206" parent="15" name="CT_id">
+      <mandatory>1</mandatory>
+      <data-type>float(7,2)|0</data-type>
+    </column>
+    <column id="207" parent="15" name="CT_year">
+      <mandatory>1</mandatory>
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="208" parent="15" name="TlIn2010AgeOver15">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="209" parent="15" name="No_InPop">
+      <data-type>int(8)|0</data-type>
+    </column>
+    <column id="210" parent="15" name="W_InPop">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="211" parent="15" name="Under5000USD_Pop">
+      <data-type>int(8)|0</data-type>
+    </column>
+    <column id="212" parent="15" name="5000_9999USD_Pop">
+      <data-type>int(8)|0</data-type>
+    </column>
+    <column id="213" parent="15" name="10000_14999USD_Pop">
+      <data-type>int(8)|0</data-type>
+    </column>
+    <column id="214" parent="15" name="15000_19999USD_Pop">
+      <data-type>int(8)|0</data-type>
+    </column>
+    <column id="215" parent="15" name="20000_29999USD_Pop">
+      <data-type>int(8)|0</data-type>
+    </column>
+    <column id="216" parent="15" name="30000_39999USD_Pop">
+      <data-type>int(8)|0</data-type>
+    </column>
+    <column id="217" parent="15" name="40000_49999USD_Pop">
+      <data-type>int(8)|0</data-type>
+    </column>
+    <column id="218" parent="15" name="50000_59999USD_Pop">
+      <data-type>int(8)|0</data-type>
+    </column>
+    <column id="219" parent="15" name="60000_79999USD_Pop">
+      <data-type>int(8)|0</data-type>
+    </column>
+    <column id="220" parent="15" name="80000_99999USD_Pop">
+      <data-type>int(8)|0</data-type>
+    </column>
+    <column id="221" parent="15" name="Over100000USD_Pop">
+      <data-type>int(8)|0</data-type>
+    </column>
+    <column id="222" parent="15" name="100000_124999USD_Pop">
+      <data-type>int(8)|0</data-type>
+    </column>
+    <column id="223" parent="15" name="Over125000USD_Pop">
+      <data-type>int(8)|0</data-type>
+    </column>
+    <column id="224" parent="15" name="MedInStdUSD_Mon">
+      <data-type>int(6)|0</data-type>
+    </column>
+    <column id="225" parent="15" name="AvgInStdUSD_Mon">
+      <data-type>int(6)|0</data-type>
+    </column>
+    <column id="226" parent="15" name="TolInStdUSDmil_Mon">
+      <data-type>bigint(12)|0</data-type>
+    </column>
+    <column id="227" parent="15" name="AfTax_TlIn2010AgeOver15">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="228" parent="15" name="AfTax_No_InPop">
+      <data-type>int(8)|0</data-type>
+    </column>
+    <column id="229" parent="15" name="AfTax_W_InPop">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="230" parent="15" name="AfTaxUnder5000USD_Pop">
+      <data-type>int(8)|0</data-type>
+    </column>
+    <column id="231" parent="15" name="AfTax5000_9999USD_Pop">
+      <data-type>int(8)|0</data-type>
+    </column>
+    <column id="232" parent="15" name="AfTax10000_14999USD_Pop">
+      <data-type>int(8)|0</data-type>
+    </column>
+    <column id="233" parent="15" name="AfTax15000_19999USD_Pop">
+      <data-type>int(8)|0</data-type>
+    </column>
+    <column id="234" parent="15" name="AfTax20000_29999USD_Pop">
+      <data-type>int(8)|0</data-type>
+    </column>
+    <column id="235" parent="15" name="AfTax30000_39999USD_Pop">
+      <data-type>int(8)|0</data-type>
+    </column>
+    <column id="236" parent="15" name="AfTax40000_49999USD_Pop">
+      <data-type>int(8)|0</data-type>
+    </column>
+    <column id="237" parent="15" name="AfTax50000_59999USD_Pop">
+      <data-type>int(8)|0</data-type>
+    </column>
+    <column id="238" parent="15" name="AfTax60000_79999USD_Pop">
+      <data-type>int(8)|0</data-type>
+    </column>
+    <column id="239" parent="15" name="AfTax80000_99999USD_Pop">
+      <data-type>int(8)|0</data-type>
+    </column>
+    <column id="240" parent="15" name="AfTaxOver100000USD_Pop">
+      <data-type>int(8)|0</data-type>
+    </column>
+    <column id="241" parent="15" name="AfTaxMedInStdUSD_Mon">
+      <data-type>int(6)|0</data-type>
+    </column>
+    <column id="242" parent="15" name="AfTaxAvgInStdUSD_Mon">
+      <data-type>int(6)|0</data-type>
+    </column>
+    <column id="243" parent="15" name="AfTaxTolInStdUSDmil_Mon">
+      <data-type>bigint(12)|0</data-type>
+    </column>
+    <key id="244" parent="15" name="PRIMARY">
+      <columns>CT_id
+CT_year</columns>
+      <primary>1</primary>
+    </key>
+    <column id="245" parent="16" name="CT_id">
+      <mandatory>1</mandatory>
+      <data-type>float(7,2)|0</data-type>
+    </column>
+    <column id="246" parent="16" name="CT_year">
+      <mandatory>1</mandatory>
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="247" parent="16" name="TlAgeOver15MaritStatPop">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="248" parent="16" name="MarriedOrWithLawO15YPartner">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="249" parent="16" name="Married_NotSeparatedO15Y">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="250" parent="16" name="LivingComLawO15Y">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="251" parent="16" name="Unmarried_NoLawPartberO15Y">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="252" parent="16" name="SingleNomarriedExpO15Y">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="253" parent="16" name="SeparatedO15Y">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="254" parent="16" name="DivorcedO15Y">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="255" parent="16" name="WidowedO15Y">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <key id="256" parent="16" name="PRIMARY">
+      <columns>CT_id
+CT_year</columns>
+      <primary>1</primary>
+    </key>
+    <column id="257" parent="17" name="CT_id">
+      <mandatory>1</mandatory>
+      <data-type>decimal(7,2)|0</data-type>
+    </column>
+    <column id="258" parent="17" name="Nd_id">
+      <mandatory>1</mandatory>
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="259" parent="17" name="CT_year">
+      <mandatory>1</mandatory>
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="260" parent="17" name="CT_UID">
+      <mandatory>1</mandatory>
+      <data-type>decimal(9,2)|0</data-type>
+    </column>
+    <key id="261" parent="17" name="PRIMARY">
+      <columns>CT_id
+CT_year</columns>
+      <primary>1</primary>
+    </key>
+    <column id="262" parent="18" name="Main_Class">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="263" parent="18" name="Sub_Class">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="264" parent="18" name="FieldName">
+      <mandatory>1</mandatory>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="265" parent="18" name="Description">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="266" parent="18" name="Definition">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="267" parent="18" name="Year">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="268" parent="18" name="Category">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="269" parent="18" name="Tablename">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="270" parent="18" name="DataSource">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <key id="271" parent="18" name="PRIMARY">
+      <columns>FieldName</columns>
+      <primary>1</primary>
+    </key>
+    <column id="272" parent="19" name="Nd_id">
+      <mandatory>1</mandatory>
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="273" parent="19" name="Nd_name">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="274" parent="19" name="Nd_area">
+      <data-type>decimal(7,2)|0</data-type>
+    </column>
+    <column id="275" parent="19" name="Nd_centerX">
+      <data-type>decimal(15,8)|0</data-type>
+    </column>
+    <column id="276" parent="19" name="Nd_centerY">
+      <data-type>decimal(15,8)|0</data-type>
+    </column>
+    <key id="277" parent="19" name="PRIMARY">
+      <columns>Nd_id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="278" parent="20" name="CT_year">
+      <mandatory>1</mandatory>
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="279" parent="20" name="Nd_id">
+      <mandatory>1</mandatory>
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="280" parent="20" name="TlNdPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="281" parent="20" name="Tl_M_NdPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="282" parent="20" name="Tl_F_NdPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="283" parent="20" name="Agegroup0_4NdPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="284" parent="20" name="Agegroup5_9NdPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="285" parent="20" name="Agegroup10_14NdPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="286" parent="20" name="Agegroup15_19NdPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="287" parent="20" name="Agegroup20_24NdPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="288" parent="20" name="Agegroup25_29NdPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="289" parent="20" name="Agegroup30_34NdPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="290" parent="20" name="Agegroup35_39NdPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="291" parent="20" name="Agegroup40_44NdPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="292" parent="20" name="Agegroup45_49NdPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="293" parent="20" name="Agegroup50_54NdPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="294" parent="20" name="Agegroup55_59NdPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="295" parent="20" name="Agegroup60_64NdPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="296" parent="20" name="Agegroup65_69NdPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="297" parent="20" name="Agegroup70_74NdPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="298" parent="20" name="Agegroup75_79NdPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="299" parent="20" name="Agegroup80_84NdPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="300" parent="20" name="Agegroup85OverNdPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="301" parent="20" name="Agegroup6_12NdPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="302" parent="20" name="ChildAge0_14NdPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="303" parent="20" name="YouthAge15_24NdPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="304" parent="20" name="Senior55OverNdPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="305" parent="20" name="Senior65OverNdPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="306" parent="20" name="SeniorLiveAloneNdPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <key id="307" parent="20" name="PRIMARY">
+      <columns>CT_year
+Nd_id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="308" parent="21" name="Nd_id">
+      <mandatory>1</mandatory>
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="309" parent="21" name="CDIPSDA">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <key id="310" parent="21" name="PRIMARY">
+      <columns>Nd_id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="311" parent="22" name="Nd_id">
+      <mandatory>1</mandatory>
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="312" parent="22" name="CT_year">
+      <mandatory>1</mandatory>
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="313" parent="22" name="Tl_AgeOver15_uspl_nofixwork_Pop">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="314" parent="22" name="Car_tru_van_driver">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="315" parent="22" name="Car_tru_van_passenger">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="316" parent="22" name="Public_transit">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="317" parent="22" name="Walked">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="318" parent="22" name="Bicycle">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="319" parent="22" name="Other_methods">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="320" parent="22" name="Per_Car_tru_van_driver">
+      <data-type>decimal(17,16)|0</data-type>
+    </column>
+    <column id="321" parent="22" name="Per_Car_tru_van_passenger">
+      <data-type>decimal(17,16)|0</data-type>
+    </column>
+    <column id="322" parent="22" name="Per_Public_transit">
+      <data-type>decimal(17,16)|0</data-type>
+    </column>
+    <column id="323" parent="22" name="Per_Walked">
+      <data-type>decimal(17,16)|0</data-type>
+    </column>
+    <column id="324" parent="22" name="Per_Bicycle">
+      <data-type>decimal(17,16)|0</data-type>
+    </column>
+    <column id="325" parent="22" name="Per_methods">
+      <data-type>decimal(17,16)|0</data-type>
+    </column>
+    <key id="326" parent="22" name="PRIMARY">
+      <columns>Nd_id
+CT_year</columns>
+      <primary>1</primary>
+    </key>
+    <column id="327" parent="23" name="CT_Dia_year">
+      <mandatory>1</mandatory>
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="328" parent="23" name="Nd_id">
+      <mandatory>1</mandatory>
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="329" parent="23" name="B_Age20Pop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="330" parent="23" name="B_Age20PopDia">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="331" parent="23" name="B_Age20Pre">
+      <data-type>decimal(4,2)|0</data-type>
+    </column>
+    <column id="332" parent="23" name="B_Age20StdPre">
+      <data-type>decimal(4,2)|0</data-type>
+    </column>
+    <column id="333" parent="23" name="F_Age20Pop">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="334" parent="23" name="F_Age20PopDia">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="335" parent="23" name="F_Age20Pre">
+      <data-type>decimal(4,2)|0</data-type>
+    </column>
+    <column id="336" parent="23" name="F_Age20StdPre">
+      <data-type>decimal(4,2)|0</data-type>
+    </column>
+    <column id="337" parent="23" name="M_Age20Pop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="338" parent="23" name="M_Age20PopDia">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="339" parent="23" name="M_Age20Pre">
+      <data-type>decimal(4,2)|0</data-type>
+    </column>
+    <column id="340" parent="23" name="M_Age20StdPre">
+      <data-type>decimal(4,2)|0</data-type>
+    </column>
+    <column id="341" parent="23" name="B_Age20_44Pop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="342" parent="23" name="B_Age20_44PopDia">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="343" parent="23" name="B_Age20_44Pre">
+      <data-type>decimal(4,2)|0</data-type>
+    </column>
+    <column id="344" parent="23" name="F_Age20_44Pop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="345" parent="23" name="F_Age20_44PopDia">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="346" parent="23" name="F_Age20_44Pre">
+      <data-type>decimal(4,2)|0</data-type>
+    </column>
+    <column id="347" parent="23" name="M_Age20_44Pop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="348" parent="23" name="M_Age20_44PopDia">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="349" parent="23" name="M_Age20_44Pre">
+      <data-type>decimal(4,2)|0</data-type>
+    </column>
+    <column id="350" parent="23" name="B_Age45_64Pop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="351" parent="23" name="B_Age45_64PopDia">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="352" parent="23" name="B_Age45_64Pre">
+      <data-type>decimal(4,2)|0</data-type>
+    </column>
+    <column id="353" parent="23" name="F_Age45_64Pop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="354" parent="23" name="F_Age45_64PopDia">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="355" parent="23" name="F_Age45_64Pre">
+      <data-type>decimal(4,2)|0</data-type>
+    </column>
+    <column id="356" parent="23" name="M_Age45_64Pop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="357" parent="23" name="M_Age45_64PopDia">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="358" parent="23" name="M_Age45_64Pre">
+      <data-type>decimal(4,2)|0</data-type>
+    </column>
+    <column id="359" parent="23" name="B_Age65Pop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="360" parent="23" name="B_Age65PopDia">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="361" parent="23" name="B_Age65Pre">
+      <data-type>decimal(4,2)|0</data-type>
+    </column>
+    <column id="362" parent="23" name="F_Age65Pop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="363" parent="23" name="F_Age65PopDia">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="364" parent="23" name="F_Age65Pre">
+      <data-type>decimal(4,2)|0</data-type>
+    </column>
+    <column id="365" parent="23" name="M_Age65Pop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="366" parent="23" name="M_Age65PopDia">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="367" parent="23" name="M_Age65Pre">
+      <data-type>decimal(4,2)|0</data-type>
+    </column>
+    <column id="368" parent="23" name="B_Age65_84Pop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="369" parent="23" name="B_Age65_84PopDia">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="370" parent="23" name="B_Age65_84Pre">
+      <data-type>decimal(4,2)|0</data-type>
+    </column>
+    <column id="371" parent="23" name="F_Age65_84Pop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="372" parent="23" name="F_Age65_84PopDia">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="373" parent="23" name="F_Age65_84Pre">
+      <data-type>decimal(4,2)|0</data-type>
+    </column>
+    <column id="374" parent="23" name="M_Age65_84Pop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="375" parent="23" name="M_Age65_84PopDia">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="376" parent="23" name="M_Age65_84Pre">
+      <data-type>decimal(4,2)|0</data-type>
+    </column>
+    <column id="377" parent="23" name="B_Age85Pop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="378" parent="23" name="B_Age85PopDia">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="379" parent="23" name="B_Age85Pre">
+      <data-type>decimal(4,2)|0</data-type>
+    </column>
+    <column id="380" parent="23" name="F_Age85Pop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="381" parent="23" name="F_Age85PopDia">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="382" parent="23" name="F_Age85Pre">
+      <data-type>decimal(4,2)|0</data-type>
+    </column>
+    <column id="383" parent="23" name="M_Age85Pop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="384" parent="23" name="M_Age85PopDia">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="385" parent="23" name="M_Age85Pre">
+      <data-type>decimal(4,2)|0</data-type>
+    </column>
+    <key id="386" parent="23" name="PRIMARY">
+      <columns>CT_Dia_year
+Nd_id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="387" parent="24" name="CT_year">
+      <mandatory>1</mandatory>
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="388" parent="24" name="Nd_id">
+      <mandatory>1</mandatory>
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="389" parent="24" name="WithCollCertificate_Diploma_NdPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="390" parent="24" name="WithBachelorDegreeHigher">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <key id="391" parent="24" name="PRIMARY">
+      <columns>CT_year
+Nd_id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="392" parent="25" name="Nd_id">
+      <mandatory>1</mandatory>
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="393" parent="25" name="Nd_name">
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <column id="394" parent="25" name="Nd_familyPhysician">
+      <data-type>smallint(5)|0</data-type>
+    </column>
+    <key id="395" parent="25" name="PRIMARY">
+      <columns>Nd_id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="396" parent="26" name="CT_year">
+      <mandatory>1</mandatory>
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="397" parent="26" name="Nd_id">
+      <mandatory>1</mandatory>
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="398" parent="26" name="BreastCancer_Screenings">
+      <data-type>decimal(25,4)|0</data-type>
+    </column>
+    <column id="399" parent="26" name="CervicalCancer_Screenings">
+      <data-type>decimal(25,4)|0</data-type>
+    </column>
+    <column id="400" parent="26" name="ColorectalCancer_Screenings">
+      <data-type>decimal(25,4)|0</data-type>
+    </column>
+    <column id="401" parent="26" name="CommunityFood_Programs">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="402" parent="26" name="Diabetes_Prevalence">
+      <data-type>decimal(25,4)|0</data-type>
+    </column>
+    <column id="403" parent="26" name="DineSafe_Inspections">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="404" parent="26" name="Female_Fertility">
+      <data-type>decimal(25,6)|0</data-type>
+    </column>
+    <column id="405" parent="26" name="Health_Providers">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="406" parent="26" name="Premature_Mortality">
+      <data-type>decimal(25,7)|0</data-type>
+    </column>
+    <column id="407" parent="26" name="Student_Nutrition">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="408" parent="26" name="Teen_Pregnancy">
+      <data-type>decimal(25,8)|0</data-type>
+    </column>
+    <key id="409" parent="26" name="PRIMARY">
+      <columns>CT_year
+Nd_id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="410" parent="27" name="CT_year">
+      <mandatory>1</mandatory>
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="411" parent="27" name="Nd_id">
+      <mandatory>1</mandatory>
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="412" parent="27" name="Home_Prices">
+      <data-type>int(8)|0</data-type>
+    </column>
+    <column id="413" parent="27" name="households_Assisited">
+      <data-type>int(6)|0</data-type>
+    </column>
+    <column id="414" parent="27" name="MidCen_Highrise_household">
+      <data-type>int(6)|0</data-type>
+    </column>
+    <column id="415" parent="27" name="MidCen_Highrise_Pop">
+      <data-type>int(6)|0</data-type>
+    </column>
+    <column id="416" parent="27" name="MidCen_Highrise_householdRate">
+      <data-type>int(6)|0</data-type>
+    </column>
+    <column id="417" parent="27" name="MidCen_Highrise_PopRate">
+      <data-type>int(6)|0</data-type>
+    </column>
+    <column id="418" parent="27" name="Rent_Bank_Applicants">
+      <data-type>int(6)|0</data-type>
+    </column>
+    <column id="419" parent="27" name="Social_Housing_Turnover">
+      <data-type>decimal(20,15)|0</data-type>
+    </column>
+    <column id="420" parent="27" name="Social_Housing_Units">
+      <data-type>int(6)|0</data-type>
+    </column>
+    <column id="421" parent="27" name="Social_Housing_Waiting_List">
+      <data-type>int(6)|0</data-type>
+    </column>
+    <key id="422" parent="27" name="PRIMARY">
+      <columns>CT_year
+Nd_id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="423" parent="28" name="CT_year">
+      <mandatory>1</mandatory>
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="424" parent="28" name="Nd_id">
+      <mandatory>1</mandatory>
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="425" parent="28" name="LowIncomeFamily_NdPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="426" parent="28" name="LowIncomeSingle_NdPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="427" parent="28" name="LowIncomeChild_NdPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="428" parent="28" name="Tl_FamiiliesIncomeAfterTax">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="429" parent="28" name="Avg_FamiliesIncomeAfterTax">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="430" parent="28" name="Tl_PrivateHouseholdIncome">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="431" parent="28" name="Pre_taxHouseholdIncome">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="432" parent="28" name="After_taxHouseholdIncome">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <key id="433" parent="28" name="PRIMARY">
+      <columns>CT_year
+Nd_id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="434" parent="29" name="CT_year">
+      <mandatory>1</mandatory>
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="435" parent="29" name="Nd_id">
+      <mandatory>1</mandatory>
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="436" parent="29" name="Tl_Labourforce_NdPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="437" parent="29" name="InLabourforce_NdPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="438" parent="29" name="Unemployed_NdPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="439" parent="29" name="NotInLabourforce_NdPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="440" parent="29" name="LessThanGrade9_NdPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <key id="441" parent="29" name="PRIMARY">
+      <columns>CT_year
+Nd_id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="442" parent="30" name="Nd_id">
+      <mandatory>1</mandatory>
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="443" parent="30" name="Postal_Areas">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="444" parent="30" name="Tests">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="445" parent="30" name="Lead_Concen_Tests">
+      <data-type>decimal(15,10)|0</data-type>
+    </column>
+    <column id="446" parent="30" name="Aver_Concen_Tests">
+      <data-type>decimal(15,10)|0</data-type>
+    </column>
+    <column id="447" parent="30" name="ExceedTimes">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="448" parent="30" name="ExceedProb">
+      <data-type>decimal(15,10)|0</data-type>
+    </column>
+    <key id="449" parent="30" name="PRIMARY">
+      <columns>Nd_id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="450" parent="31" name="CT_year">
+      <mandatory>1</mandatory>
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="451" parent="31" name="Nd_id">
+      <mandatory>1</mandatory>
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="452" parent="31" name="TlVisible_minorityNdPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="453" parent="31" name="Chinese_NdPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="454" parent="31" name="SouthAsian_NdPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="455" parent="31" name="Black_NdPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="456" parent="31" name="Filipino_NdPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="457" parent="31" name="LatinAmerican_NdPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="458" parent="31" name="SoutheastAsian_NdPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="459" parent="31" name="Arab_NdPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="460" parent="31" name="WestAsian_NdPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="461" parent="31" name="Korean_NdPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="462" parent="31" name="Japanese_NdPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="463" parent="31" name="Other_Visible_Minority_NdPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="464" parent="31" name="Multiple_Visible_Minority_NdPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="465" parent="31" name="No_Visible_Minority_NdTPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="466" parent="31" name="Aboriginal_NdPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="467" parent="31" name="Tl_HomeLanguage_NdTPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="468" parent="31" name="lanChinese_NdPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="469" parent="31" name="lanItalian_NdPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="470" parent="31" name="lanKorean_NdPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="471" parent="31" name="lan_Persian_Farsi_NdPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="472" parent="31" name="lanPortuguese_NdPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="473" parent="31" name="lanRussian_NdPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="474" parent="31" name="lanSpanish_NdPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="475" parent="31" name="lanTagalog_NdPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="476" parent="31" name="lanTamil_NdPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="477" parent="31" name="lanUrdu_NdPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <key id="478" parent="31" name="PRIMARY">
+      <columns>CT_year
+Nd_id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="479" parent="32" name="CT_year">
+      <mandatory>1</mandatory>
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="480" parent="32" name="Nd_id">
+      <mandatory>1</mandatory>
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="481" parent="32" name="Tl_Mobility_NdPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="482" parent="32" name="Non_Movers_NdPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="483" parent="32" name="Movers_NdPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="484" parent="32" name="Tl_RecImmi_NdPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="485" parent="32" name="RecImmi_NdPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="486" parent="32" name="SoutherAsiaImmi_NdPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="487" parent="32" name="SouthEastAsiaImmi_NdPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="488" parent="32" name="EasternAsiaImmi_NdPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="489" parent="32" name="WestAsia_MiddleEastImmi_NdPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="490" parent="32" name="AfricaImmi_NdPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="491" parent="32" name="EuropeImmi_NdPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="492" parent="32" name="Caribbe_Central_SAmericaImmi_NdPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <key id="493" parent="32" name="PRIMARY">
+      <columns>CT_year
+Nd_id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="494" parent="33" name="Nd_id">
+      <mandatory>1</mandatory>
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="495" parent="33" name="Nd_Mrfei">
+      <data-type>decimal(16,14)|0</data-type>
+    </column>
+    <key id="496" parent="33" name="PRIMARY">
+      <columns>Nd_id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="497" parent="34" name="CT_year">
+      <mandatory>1</mandatory>
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="498" parent="34" name="Nd_id">
+      <mandatory>1</mandatory>
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="499" parent="34" name="CDIPSDA">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="500" parent="34" name="OverweightRate">
+      <data-type>float|0</data-type>
+    </column>
+    <key id="501" parent="34" name="PRIMARY">
+      <columns>Nd_id
+CT_year</columns>
+      <primary>1</primary>
+    </key>
+    <column id="502" parent="35" name="CT_year">
+      <mandatory>1</mandatory>
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="503" parent="35" name="Nd_id">
+      <mandatory>1</mandatory>
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="504" parent="35" name="Ambulance_Calls">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="505" parent="35" name="Ambulance_Referrals">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="506" parent="35" name="Arsons">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="507" parent="35" name="Assaults">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="508" parent="35" name="Break_Enters">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="509" parent="35" name="Drug_Arrests">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="510" parent="35" name="Fire_Medical_Calls">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="511" parent="35" name="Fire_Vehicle_Incidents">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="512" parent="35" name="Firearms_Incidents">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="513" parent="35" name="Fires_FireAlarms">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="514" parent="35" name="Hazardous_Incidents">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="515" parent="35" name="Murders">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="516" parent="35" name="Robberies">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="517" parent="35" name="Sexual_Assaults">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="518" parent="35" name="TCHCsafety_Incidents">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="519" parent="35" name="Thefts">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="520" parent="35" name="Total_Major_Crime_Incidents">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="521" parent="35" name="Vehicle_Thefts">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <key id="522" parent="35" name="PRIMARY">
+      <columns>CT_year
+Nd_id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="523" parent="36" name="Nd_id">
+      <mandatory>1</mandatory>
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="524" parent="36" name="Nd_WaterPlants">
+      <data-type>varchar(20)|0</data-type>
+    </column>
+    <column id="525" parent="36" name="Nd_distance">
+      <data-type>decimal(15,8)|0</data-type>
+    </column>
+    <key id="526" parent="36" name="PRIMARY">
+      <columns>Nd_id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="527" parent="37" name="CT_year">
+      <mandatory>1</mandatory>
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="528" parent="37" name="Nd_id">
+      <mandatory>1</mandatory>
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="529" parent="37" name="Tl_Tenants_NdPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="530" parent="37" name="HighShelterCost_NdPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="531" parent="37" name="OwnedDewlling_NdPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="532" parent="37" name="RentedDewlling_NdPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="533" parent="37" name="HomeRepairsNeeded_NdPop">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="534" parent="37" name="TenantAverageCent">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <key id="535" parent="37" name="PRIMARY">
+      <columns>CT_year
+Nd_id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="536" parent="38" name="Id">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="537" parent="38" name="username">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="538" parent="38" name="password">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="539" parent="38" name="email">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <key id="540" parent="38" name="PRIMARY">
+      <columns>Id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="541" parent="39" name="address">
+      <mandatory>1</mandatory>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="542" parent="39" name="lat">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="543" parent="39" name="lng">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="544" parent="39" name="precise">
+      <data-type>char(1)|0</data-type>
+    </column>
+    <column id="545" parent="39" name="confidence">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="546" parent="39" name="level">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <key id="547" parent="39" name="PRIMARY">
+      <columns>address</columns>
+      <primary>1</primary>
+    </key>
+    <column id="548" parent="40" name="year">
+      <mandatory>1</mandatory>
+      <data-type>int(4)|0</data-type>
+    </column>
+    <column id="549" parent="40" name="cardID">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="550" parent="40" name="cardNum">
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="551" parent="40" name="cardStatus">
+      <data-type>varchar(20)|0</data-type>
+    </column>
+    <key id="552" parent="40" name="PRIMARY">
+      <columns>year
+cardID</columns>
+      <primary>1</primary>
+    </key>
+    <column id="553" parent="41" name="year">
+      <mandatory>1</mandatory>
+      <data-type>int(4)|0</data-type>
+    </column>
+    <column id="554" parent="41" name="cardID">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="555" parent="41" name="countyJudgDate">
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="556" parent="41" name="localJudgeDate">
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="557" parent="41" name="provinceJudgDate">
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="558" parent="41" name="judgStatus">
+      <data-type>varchar(20)|0</data-type>
+    </column>
+    <key id="559" parent="41" name="PRIMARY">
+      <columns>year
+cardID</columns>
+      <primary>1</primary>
+    </key>
+    <column id="560" parent="42" name="year">
+      <mandatory>1</mandatory>
+      <data-type>int(4)|0</data-type>
+    </column>
+    <column id="561" parent="42" name="cardID">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="562" parent="42" name="reportUnitAreaCode">
+      <data-type>int(20)|0</data-type>
+    </column>
+    <column id="563" parent="42" name="reportUnit">
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <column id="564" parent="42" name="unitType">
+      <data-type>varchar(20)|0</data-type>
+    </column>
+    <column id="565" parent="42" name="reportInputDate">
+      <data-type>varchar(20)|0</data-type>
+    </column>
+    <column id="566" parent="42" name="inputUser">
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="567" parent="42" name="inputUserUnit">
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <key id="568" parent="42" name="PRIMARY">
+      <columns>year
+cardID</columns>
+      <primary>1</primary>
+    </key>
+    <column id="569" parent="43" name="year">
+      <mandatory>1</mandatory>
+      <data-type>int(4)|0</data-type>
+    </column>
+    <column id="570" parent="43" name="cardID">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="571" parent="43" name="diseasePreRevised">
+      <data-type>varchar(20)|0</data-type>
+    </column>
+    <column id="572" parent="43" name="revisedReportDate">
+      <data-type>varchar(20)|0</data-type>
+    </column>
+    <column id="573" parent="43" name="revisedFinalJudgDate">
+      <data-type>varchar(20)|0</data-type>
+    </column>
+    <column id="574" parent="43" name="finalJudgDeathDate">
+      <data-type>varchar(20)|0</data-type>
+    </column>
+    <column id="575" parent="43" name="reviseUser">
+      <data-type>varchar(20)|0</data-type>
+    </column>
+    <column id="576" parent="43" name="reviseUserUnit">
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <column id="577" parent="43" name="delDate">
+      <data-type>varchar(20)|0</data-type>
+    </column>
+    <column id="578" parent="43" name="delUser">
+      <data-type>varchar(20)|0</data-type>
+    </column>
+    <column id="579" parent="43" name="delUserUnit">
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <column id="580" parent="43" name="delReason">
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <key id="581" parent="43" name="PRIMARY">
+      <columns>year
+cardID</columns>
+      <primary>1</primary>
+    </key>
+    <column id="582" parent="44" name="userName">
+      <mandatory>1</mandatory>
+      <data-type>char(50)|0</data-type>
+    </column>
+    <column id="583" parent="44" name="userPassword">
+      <mandatory>1</mandatory>
+      <data-type>char(50)|0</data-type>
+    </column>
+    <column id="584" parent="44" name="userRealName">
+      <mandatory>1</mandatory>
+      <data-type>char(50)|0</data-type>
+    </column>
+    <column id="585" parent="44" name="userEmail">
+      <mandatory>1</mandatory>
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <column id="586" parent="44" name="userPhone">
+      <mandatory>1</mandatory>
+      <data-type>char(20)|0</data-type>
+    </column>
+    <column id="587" parent="44" name="userUnit">
+      <mandatory>1</mandatory>
+      <data-type>char(100)|0</data-type>
+    </column>
+    <column id="588" parent="44" name="reviewStatus">
+      <mandatory>1</mandatory>
+      <data-type>char(50)|0</data-type>
+    </column>
+    <column id="589" parent="44" name="perissionInformation">
+      <mandatory>1</mandatory>
+      <data-type>char(50)|0</data-type>
+    </column>
+    <column id="590" parent="44" name="joinDate">
+      <mandatory>1</mandatory>
+      <data-type>datetime|0</data-type>
+    </column>
+    <key id="591" parent="44" name="PRIMARY">
+      <columns>userEmail</columns>
+      <primary>1</primary>
+    </key>
+    <column id="592" parent="45" name="breakYear">
+      <mandatory>1</mandatory>
+      <data-type>int(4)|0</data-type>
+    </column>
+    <column id="593" parent="45" name="breakMonth">
+      <mandatory>1</mandatory>
+      <data-type>int(4)|0</data-type>
+    </column>
+    <column id="594" parent="45" name="province">
+      <mandatory>1</mandatory>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="595" parent="45" name="city">
+      <mandatory>1</mandatory>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="596" parent="45" name="county">
+      <mandatory>1</mandatory>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="597" parent="45" name="town">
+      <mandatory>1</mandatory>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="598" parent="45" name="caseNum">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <key id="599" parent="45" name="PRIMARY">
+      <columns>breakYear
+breakMonth
+province
+city
+county
+town</columns>
+      <primary>1</primary>
+    </key>
+    <column id="600" parent="46" name="id">
+      <mandatory>1</mandatory>
+      <data-type>mediumint(8) unsigned|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="601" parent="46" name="name">
+      <mandatory>1</mandatory>
+      <data-type>varchar(255)|0</data-type>
+      <default-expression>&apos;&apos;</default-expression>
+    </column>
+    <column id="602" parent="46" name="level">
+      <mandatory>1</mandatory>
+      <data-type>tinyint(4) unsigned|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="603" parent="46" name="upId">
+      <mandatory>1</mandatory>
+      <data-type>mediumint(8) unsigned|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <key id="604" parent="46" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="605" parent="47" name="fieldName">
+      <mandatory>1</mandatory>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="606" parent="47" name="belongTable">
+      <mandatory>1</mandatory>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="607" parent="47" name="tableAlias">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="608" parent="47" name="displayName">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="609" parent="47" name="downable">
+      <data-type>tinyint(4)|0</data-type>
+    </column>
+    <column id="610" parent="47" name="category">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <key id="611" parent="47" name="PRIMARY">
+      <columns>fieldName
+belongTable</columns>
+      <primary>1</primary>
+    </key>
+    <column id="612" parent="48" name="districtStationNum">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="613" parent="48" name="stationName">
+      <data-type>char(20)|0</data-type>
+    </column>
+    <column id="614" parent="48" name="provinves">
+      <data-type>char(20)|0</data-type>
+    </column>
+    <column id="615" parent="48" name="lat">
+      <data-type>int(20)|0</data-type>
+    </column>
+    <column id="616" parent="48" name="lng">
+      <data-type>int(20)|0</data-type>
+    </column>
+    <column id="617" parent="48" name="altitude">
+      <data-type>int(20)|0</data-type>
+    </column>
+    <column id="618" parent="48" name="startYear">
+      <data-type>int(20)|0</data-type>
+    </column>
+    <column id="619" parent="48" name="startMonth">
+      <data-type>int(20)|0</data-type>
+    </column>
+    <column id="620" parent="48" name="endYear">
+      <data-type>int(20)|0</data-type>
+    </column>
+    <column id="621" parent="48" name="endMonth">
+      <data-type>int(20)|0</data-type>
+    </column>
+    <column id="622" parent="48" name="lackMeasurement">
+      <data-type>char(50)|0</data-type>
+    </column>
+    <key id="623" parent="48" name="PRIMARY">
+      <columns>districtStationNum</columns>
+      <primary>1</primary>
+    </key>
+    <column id="624" parent="49" name="year">
+      <mandatory>1</mandatory>
+      <data-type>int(4)|0</data-type>
+    </column>
+    <column id="625" parent="49" name="cardID">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="626" parent="49" name="caseCategory1">
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="627" parent="49" name="caseCategory2">
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="628" parent="49" name="illDate">
+      <data-type>date|0</data-type>
+    </column>
+    <column id="629" parent="49" name="confirmDate">
+      <data-type>varchar(20)|0</data-type>
+    </column>
+    <column id="630" parent="49" name="deathDate">
+      <data-type>varchar(20)|0</data-type>
+    </column>
+    <column id="631" parent="49" name="diseaseName">
+      <data-type>varchar(20)|0</data-type>
+    </column>
+    <column id="632" parent="49" name="fillCardDoc">
+      <data-type>varchar(20)|0</data-type>
+    </column>
+    <column id="633" parent="49" name="fillCardDate">
+      <data-type>date|0</data-type>
+    </column>
+    <column id="634" parent="49" name="notes">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <key id="635" parent="49" name="PRIMARY">
+      <columns>year
+cardID</columns>
+      <primary>1</primary>
+    </key>
+    <column id="636" parent="50" name="year">
+      <mandatory>1</mandatory>
+      <data-type>int(4)|0</data-type>
+    </column>
+    <column id="637" parent="50" name="cardID">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="638" parent="50" name="name">
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="639" parent="50" name="sex">
+      <data-type>varchar(10)|0</data-type>
+    </column>
+    <column id="640" parent="50" name="birthday">
+      <data-type>date|0</data-type>
+    </column>
+    <column id="641" parent="50" name="age">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="642" parent="50" name="workUnit">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="643" parent="50" name="tel">
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="644" parent="50" name="belongs">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="645" parent="50" name="address">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="646" parent="50" name="career">
+      <data-type>varchar(20)|0</data-type>
+    </column>
+    <column id="647" parent="50" name="addrNationID">
+      <data-type>int(20)|0</data-type>
+    </column>
+    <key id="648" parent="50" name="PRIMARY">
+      <columns>year
+cardID</columns>
+      <primary>1</primary>
+    </key>
+    <column id="649" parent="51" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="650" parent="51" name="province_name">
+      <mandatory>1</mandatory>
+      <data-type>char(64)|0</data-type>
+    </column>
+    <column id="651" parent="51" name="city_name">
+      <mandatory>1</mandatory>
+      <data-type>char(64)|0</data-type>
+    </column>
+    <column id="652" parent="51" name="county_name">
+      <mandatory>1</mandatory>
+      <data-type>char(64)|0</data-type>
+    </column>
+    <column id="653" parent="51" name="town_name">
+      <mandatory>1</mandatory>
+      <data-type>char(64)|0</data-type>
+    </column>
+    <column id="654" parent="51" name="village_name">
+      <mandatory>1</mandatory>
+      <data-type>char(64)|0</data-type>
+    </column>
+    <key id="655" parent="51" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="656" parent="52" name="userName">
+      <mandatory>1</mandatory>
+      <data-type>char(50)|0</data-type>
+    </column>
+    <column id="657" parent="52" name="userPassword">
+      <mandatory>1</mandatory>
+      <data-type>char(50)|0</data-type>
+    </column>
+    <column id="658" parent="52" name="userRealName">
+      <mandatory>1</mandatory>
+      <data-type>char(50)|0</data-type>
+    </column>
+    <column id="659" parent="52" name="userEmail">
+      <mandatory>1</mandatory>
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <column id="660" parent="52" name="userPhone">
+      <mandatory>1</mandatory>
+      <data-type>char(20)|0</data-type>
+    </column>
+    <column id="661" parent="52" name="userUnit">
+      <mandatory>1</mandatory>
+      <data-type>char(100)|0</data-type>
+    </column>
+    <column id="662" parent="52" name="reviewStatus">
+      <mandatory>1</mandatory>
+      <data-type>char(50)|0</data-type>
+    </column>
+    <column id="663" parent="52" name="perissionInformation">
+      <mandatory>1</mandatory>
+      <data-type>char(50)|0</data-type>
+    </column>
+    <column id="664" parent="52" name="joinDate">
+      <mandatory>1</mandatory>
+      <data-type>datetime|0</data-type>
+    </column>
+    <key id="665" parent="52" name="PRIMARY">
+      <columns>userEmail</columns>
+      <primary>1</primary>
+    </key>
+    <column id="666" parent="53" name="districtStationNum">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="667" parent="53" name="weatherYear">
+      <mandatory>1</mandatory>
+      <data-type>int(4)|0</data-type>
+    </column>
+    <column id="668" parent="53" name="weatherMonth">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="669" parent="53" name="weatherDay">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="670" parent="53" name="precipitation2020">
+      <data-type>char(50)|0</data-type>
+    </column>
+    <column id="671" parent="53" name="maximumWindSpeed">
+      <data-type>int(50)|0</data-type>
+    </column>
+    <column id="672" parent="53" name="directionMaximumWindSpeed">
+      <data-type>char(50)|0</data-type>
+    </column>
+    <column id="673" parent="53" name="avePressure">
+      <data-type>int(50)|0</data-type>
+    </column>
+    <column id="674" parent="53" name="aveWindSpeed">
+      <data-type>int(50)|0</data-type>
+    </column>
+    <column id="675" parent="53" name="aveTemperature">
+      <data-type>int(50)|0</data-type>
+    </column>
+    <column id="676" parent="53" name="aveVaporPressure">
+      <data-type>int(50)|0</data-type>
+    </column>
+    <column id="677" parent="53" name="aveRelativeHumidity">
+      <data-type>int(50)|0</data-type>
+    </column>
+    <column id="678" parent="53" name="sunshineTime">
+      <data-type>int(50)|0</data-type>
+    </column>
+    <column id="679" parent="53" name="dailyMinPressure">
+      <data-type>int(50)|0</data-type>
+    </column>
+    <column id="680" parent="53" name="dailyMinTemperature">
+      <data-type>int(50)|0</data-type>
+    </column>
+    <column id="681" parent="53" name="dailyMaxPressure">
+      <data-type>int(50)|0</data-type>
+    </column>
+    <column id="682" parent="53" name="dailyMaxTemperature">
+      <data-type>int(50)|0</data-type>
+    </column>
+    <column id="683" parent="53" name="maxWindSpeed">
+      <data-type>int(50)|0</data-type>
+    </column>
+    <column id="684" parent="53" name="directionMaxWindSpeed">
+      <data-type>char(50)|0</data-type>
+    </column>
+    <column id="685" parent="53" name="minRelativeHumidity">
+      <data-type>int(50)|0</data-type>
+    </column>
+    <key id="686" parent="53" name="PRIMARY">
+      <columns>districtStationNum
+weatherYear
+weatherMonth
+weatherDay</columns>
+      <primary>1</primary>
+    </key>
+  </database-model>
+</dataSource>

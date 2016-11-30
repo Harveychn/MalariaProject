@@ -7,10 +7,8 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import javax.annotation.Resource;
 
-import static org.junit.Assert.*;
-
 /**
- * Created by R丶sJournal on 2016/11/21.
+ * Created by R丶sJournal on 2016/11/29.
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = {"classpath*:spring/applicationContext*.xml"})
